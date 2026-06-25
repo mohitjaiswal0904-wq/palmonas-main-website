@@ -15,6 +15,7 @@ import {
   UserIcon,
 } from "@/components/ui/icons";
 import { useCart } from "@/hooks/useCart";
+import { useScrollDirection } from "@/hooks/useScrollDirection";
 import { useWishlist } from "@/hooks/useWishlist";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
@@ -50,6 +51,9 @@ export default function Header() {
   const isSearch = pathname === "/search" || pathname?.startsWith("/search/");
   const isCart = pathname === "/cart" || pathname?.startsWith("/cart/");
   const bnbHasCart = !(isPdp || isPlp || isSearch || isCart);
+
+  // Mobile search auto-hides while scrolling down and reveals on scroll up.
+  const searchHidden = useScrollDirection();
 
   return (
     <>
@@ -183,17 +187,29 @@ export default function Header() {
           </div>
         ) : null}
 
+        {/* Mobile search — inside the sticky bar, auto-hides on scroll down and
+            reveals on scroll up via the smooth grid-rows 1fr→0fr collapse.
+            Hidden on the compact (PLP/PDP) and cart routes. */}
+        {!compact && !isCart ? (
+          <div
+            className={`grid transition-[grid-template-rows] duration-300 ease-out md:hidden ${
+              searchHidden ? "grid-rows-[0fr]" : "grid-rows-[1fr]"
+            }`}
+          >
+            <div
+              className={`min-h-0 overflow-hidden transition-opacity duration-300 ease-out ${
+                searchHidden ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <div className="px-4 pb-3 pt-px">
+                <SearchBox className="h-[46px]" />
+              </div>
+            </div>
+          </div>
+        ) : null}
+
         <DesktopNav />
       </div>
-
-      {/* Mobile search — placed below the sticky bar in normal flow, so it
-          scrolls up behind the header at the exact scroll speed. Hidden on the
-          compact (PLP/PDP) and cart routes. */}
-      {!compact && !isCart ? (
-        <div className="bg-white px-4 pb-3 md:hidden">
-          <SearchBox className="h-[46px]" />
-        </div>
-      ) : null}
 
       <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} />
     </>

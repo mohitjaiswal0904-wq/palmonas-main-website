@@ -66,6 +66,7 @@ export default function SilverPage() {
       <section className="mx-auto w-full max-w-[1600px] px-6 py-12">
         <CategoryCircles
           items={silverCategories}
+          columns={4}
           ringClassName="ring-[#8a949e]/30"
           bgClassName="bg-[#f1f4f6]"
         />
