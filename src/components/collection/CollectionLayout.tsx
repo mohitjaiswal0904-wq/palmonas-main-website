@@ -1,10 +1,30 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import CollectionMobileBar from "./CollectionMobileBar";
 import ProductCard from "@/components/product/ProductCard";
 import { cn } from "@/lib/cn";
 import type { Product } from "@/types/product";
+
+/** Products shown per page in the collection grid. */
+const PAGE_SIZE = 24;
+
+/**
+ * Build a compact page list with ellipsis gaps, e.g.
+ * [1, "…", 4, 5, 6, "…", 12]. Always keeps the first/last page and the
+ * current page with its neighbours.
+ */
+function getPageItems(current: number, total: number): (number | "…")[] {
+  if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+  const items: (number | "…")[] = [1];
+  const start = Math.max(2, current - 1);
+  const end = Math.min(total - 1, current + 1);
+  if (start > 2) items.push("…");
+  for (let i = start; i <= end; i += 1) items.push(i);
+  if (end < total - 1) items.push("…");
+  items.push(total);
+  return items;
+}
 
 /* ---------- static config ---------- */
 
@@ -99,6 +119,80 @@ function ProductSkeleton() {
   );
 }
 
+function Pagination({
+  page,
+  totalPages,
+  onChange,
+}: {
+  page: number;
+  totalPages: number;
+  onChange: (p: number) => void;
+}) {
+  if (totalPages <= 1) return null;
+
+  const baseBtn =
+    "flex h-10 min-w-10 items-center justify-center rounded-lg border px-3 text-sm transition-colors";
+
+  return (
+    <nav
+      aria-label="Pagination"
+      className="mt-10 flex items-center justify-center gap-1.5"
+    >
+      <button
+        type="button"
+        onClick={() => onChange(page - 1)}
+        disabled={page === 1}
+        aria-label="Previous page"
+        className={cn(
+          baseBtn,
+          "border-black/15 text-[#151515] hover:border-[#151515] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-black/15",
+        )}
+      >
+        <ChevronDown className="rotate-90" />
+      </button>
+
+      {getPageItems(page, totalPages).map((item, i) =>
+        item === "…" ? (
+          <span
+            key={`gap-${i}`}
+            className="flex h-10 min-w-10 items-center justify-center text-sm text-[#8a8a8a]"
+          >
+            …
+          </span>
+        ) : (
+          <button
+            key={item}
+            type="button"
+            onClick={() => onChange(item)}
+            aria-current={item === page ? "page" : undefined}
+            className={cn(
+              baseBtn,
+              item === page
+                ? "border-[#151515] bg-[#151515] font-semibold text-white"
+                : "border-black/15 text-[#151515] hover:border-[#151515]",
+            )}
+          >
+            {item}
+          </button>
+        ),
+      )}
+
+      <button
+        type="button"
+        onClick={() => onChange(page + 1)}
+        disabled={page === totalPages}
+        aria-label="Next page"
+        className={cn(
+          baseBtn,
+          "border-black/15 text-[#151515] hover:border-[#151515] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-black/15",
+        )}
+      >
+        <ChevronDown className="-rotate-90" />
+      </button>
+    </nav>
+  );
+}
+
 /* ---------- shared presentational layout ---------- */
 
 export interface CollectionLayoutProps {
@@ -123,6 +217,8 @@ export default function CollectionLayout({
   const [activeOffer, setActiveOffer] = useState<string | null>(null);
   const [sortOpen, setSortOpen] = useState(false);
   const [sortBy, setSortBy] = useState(sortOptions[0]);
+  const [page, setPage] = useState(1);
+  const gridTopRef = useRef<HTMLDivElement>(null);
 
   const selectFilter = (group: string, option: string) =>
     setSelected((prev) => ({ ...prev, [group]: option }));
@@ -148,6 +244,24 @@ export default function CollectionLayout({
         return list;
     }
   }, [sortBy, products]);
+
+  const totalPages = Math.max(1, Math.ceil(sortedProducts.length / PAGE_SIZE));
+
+  // Keep the page in range whenever the result set or sort order changes.
+  useEffect(() => {
+    setPage(1);
+  }, [sortBy, activeOffer, selected, products.length]);
+
+  const pagedProducts = useMemo(
+    () => sortedProducts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE),
+    [sortedProducts, page],
+  );
+
+  const goToPage = (next: number) => {
+    const clamped = Math.min(Math.max(1, next), totalPages);
+    setPage(clamped);
+    gridTopRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <div className="flex flex-1 flex-col bg-white font-sans text-[#151515]">
@@ -193,7 +307,7 @@ export default function CollectionLayout({
         </aside>
 
         {/* Main content */}
-        <div className="min-w-0 flex-1">
+        <div ref={gridTopRef} className="min-w-0 flex-1 scroll-mt-24">
           {/* Offer tabs + sort */}
           <div className="mb-6 flex items-center justify-between gap-4">
             <div className="flex min-w-0 flex-1 gap-2.5 overflow-x-auto [scrollbar-width:none] lg:flex-none [&::-webkit-scrollbar]:hidden">
@@ -256,11 +370,14 @@ export default function CollectionLayout({
               ))}
             </div>
           ) : sortedProducts.length > 0 ? (
-            <div className="-mx-4 grid grid-cols-2 gap-px border-y border-black/10 bg-black/10 sm:-mx-6 md:grid-cols-3 lg:mx-0 lg:border xl:grid-cols-4">
-              {sortedProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
+            <>
+              <div className="-mx-4 grid grid-cols-2 gap-px border-y border-black/10 bg-black/10 sm:-mx-6 md:grid-cols-3 lg:mx-0 lg:border xl:grid-cols-4">
+                {pagedProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+              <Pagination page={page} totalPages={totalPages} onChange={goToPage} />
+            </>
           ) : (
             <p className="py-20 text-center text-[#8a8a8a]">
               No products found in this collection.

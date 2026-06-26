@@ -72,7 +72,7 @@ function HeartIcon({ filled, className }: { filled?: boolean; className?: string
       viewBox="0 0 24 24"
       fill={filled ? "#e0517a" : "none"}
       stroke={filled ? "#e0517a" : "#151515"}
-      strokeWidth="1.8"
+      strokeWidth="1.4"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
