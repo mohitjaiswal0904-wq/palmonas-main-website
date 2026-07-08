@@ -9,7 +9,6 @@ import {
   BagIcon,
   HeartIcon,
   MenuIcon,
-  PinIcon,
   SearchIcon,
   StoreIcon,
   UserIcon,
@@ -19,6 +18,8 @@ import { useScrollDirection } from "@/hooks/useScrollDirection";
 import { useWishlist } from "@/hooks/useWishlist";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
+import PincodeSheet from "@/components/pincode/PincodeSheet";
+import PincodeBar from "@/components/pincode/PincodeBar";
 
 /** Small count bubble shown on the cart / wishlist icons. */
 function CountBadge({ count }: { count: number }) {
@@ -98,15 +99,7 @@ export default function Header() {
 
           {/* Right cluster */}
           <div className="ml-auto flex items-center gap-4 sm:gap-6">
-            {/* Pincode */}
-            <div className="hidden items-center gap-1.5 xl:flex">
-              <PinIcon className="text-black" />
-              <span className="text-sm text-black">Update Pincode</span>
-              <span className="rounded-lg bg-gradient-to-r from-[#ffccbc]/50 to-white/50 px-2 py-1.5 text-xs italic text-black">
-                Delivering to <span className="font-bold not-italic">221002</span>
-              </span>
-            </div>
-
+            <PincodeBar variant="desktop" />
             {/* Compact-header search toggle (mobile only, PLP — hidden on PDP) */}
             {isPlp ? (
               <button
@@ -208,10 +201,18 @@ export default function Header() {
           </div>
         ) : null}
 
+        {/* Mobile pincode — below search, left-aligned (Figma mobile header) */}
+        {!isCart ? (
+          <div className="md:hidden pb-3">
+            <PincodeBar variant="mobile" />
+          </div>
+        ) : null}
+
         <DesktopNav />
       </div>
 
       <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} />
+      <PincodeSheet />
     </>
   );
 }

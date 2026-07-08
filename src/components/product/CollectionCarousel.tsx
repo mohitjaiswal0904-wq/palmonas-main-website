@@ -6,6 +6,7 @@ import ProductCarousel from "@/components/product/ProductCarousel";
 import ViewAllButton from "@/components/ui/ViewAllButton";
 import { useCollection } from "@/hooks/useCollection";
 import { collectionProductToCard } from "@/lib/adapters";
+import { cn } from "@/lib/cn";
 
 /** Horizontal skeleton shown while a collection's products load. */
 function CarouselSkeleton() {
@@ -43,6 +44,9 @@ export interface CollectionCarouselProps {
   limit?: number;
   /** Hide the "View All" button. */
   hideViewAll?: boolean;
+  /** Hide the built-in section heading (use an external themed heading). */
+  hideHeading?: boolean;
+  className?: string;
 }
 
 /**
@@ -56,6 +60,8 @@ export default function CollectionCarousel({
   subtitle,
   limit = 12,
   hideViewAll = false,
+  hideHeading = false,
+  className,
 }: CollectionCarouselProps) {
   const { collection, loading } = useCollection(handle);
 
@@ -69,10 +75,15 @@ export default function CollectionCarousel({
   if (!loading && products.length === 0) return null;
 
   return (
-    <section className="w-full px-4 py-12 sm:px-8">
-      <div className="mb-8">
-        <SectionHeading title={title ?? collection?.title ?? ""} subtitle={subtitle} />
-      </div>
+    <section className={cn("w-full px-4 py-12 sm:px-8", className)}>
+      {!hideHeading ? (
+        <div className="mb-8">
+          <SectionHeading
+            title={title ?? collection?.title ?? ""}
+            subtitle={subtitle}
+          />
+        </div>
+      ) : null}
 
       {loading ? <CarouselSkeleton /> : <ProductCarousel products={products} />}
 

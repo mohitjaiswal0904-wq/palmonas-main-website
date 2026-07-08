@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "@/components/layout/Footer";
 import { ArrowIcon } from "@/components/ui/icons";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CollectionCarousel from "@/components/product/CollectionCarousel";
@@ -8,7 +7,7 @@ import CategoryCircles, {
   type CategoryCircleItem,
 } from "@/components/collection/CategoryCircles";
 
-const PRODUCT_IMAGE = "/collection/product-earrings.jpg";
+import { PRODUCT_IMAGE } from "@/data/products";
 
 const goldCategories: CategoryCircleItem[] = [
   { label: "Rings", handle: "9kt-gold-rings" },
@@ -152,7 +151,6 @@ export default function GoldPage() {
       {/* Trending Designs */}
       <CollectionCarousel handle="gold-best-sellers" title="Trending Designs" />
 
-      <Footer />
     </div>
   );
 }

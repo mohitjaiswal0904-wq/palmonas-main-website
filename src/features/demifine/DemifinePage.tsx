@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "@/components/layout/Footer";
 import { ArrowIcon } from "@/components/ui/icons";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CollectionCarousel from "@/components/product/CollectionCarousel";
@@ -9,7 +8,7 @@ import CategoryCircles, {
   type CategoryCircleItem,
 } from "@/components/collection/CategoryCircles";
 
-const PRODUCT_IMAGE = "/collection/product-earrings.jpg";
+import { PRODUCT_IMAGE } from "@/data/products";
 
 const categories: CategoryCircleItem[] = [
   { label: "Rings", handle: "demi-fine-rings" },
@@ -96,7 +95,7 @@ export default function DemifinePage() {
           <div className="relative z-10 max-w-xl px-10 sm:px-16">
             <p className="text-sm uppercase tracking-[0.3em] text-[#f3c2cc]/90">New Season</p>
             <h3 className="mt-3 text-3xl font-semibold text-[#fbe4e7] sm:text-5xl">Pieces that move with you</h3>
-            <Link href="/collection/new-arrivals" className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#fbe4e7] px-7 py-3 text-sm font-medium text-[#4a1d27] transition-transform hover:scale-105">
+            <Link href="/new-arrivals" className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#fbe4e7] px-7 py-3 text-sm font-medium text-[#4a1d27] transition-transform hover:scale-105">
               Explore now <ArrowIcon />
             </Link>
           </div>
@@ -214,7 +213,6 @@ export default function DemifinePage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

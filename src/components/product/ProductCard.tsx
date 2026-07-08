@@ -9,6 +9,7 @@ import { cn } from "@/lib/cn";
 import { parsePrice } from "@/lib/format";
 import { productHref } from "@/lib/product";
 import AnimatedBadge from "@/components/product/AnimatedBadge";
+import NewArrivalTag from "@/components/product/NewArrivalTag";
 import type { Product } from "@/types/product";
 
 function StarIcon({ className }: { className?: string }) {
@@ -72,7 +73,7 @@ function HeartIcon({ filled, className }: { filled?: boolean; className?: string
       viewBox="0 0 24 24"
       fill={filled ? "#e0517a" : "none"}
       stroke={filled ? "#e0517a" : "#151515"}
-      strokeWidth="1.8"
+      strokeWidth="1.4"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
@@ -135,8 +136,10 @@ export default function ProductCard({ product }: { product: Product }) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
 
-        {/* Bestseller / fast-delivery badge (animated swap) */}
-        {product.badge ? (
+        {/* New arrival tag or bestseller / fast-delivery badge */}
+        {product.isNewArrival ? (
+          <NewArrivalTag tone="dark" className="absolute left-0 top-2 z-10" />
+        ) : product.badge ? (
           <AnimatedBadge bestseller={product.badge} className="absolute left-1.5 top-2" />
         ) : null}
 

@@ -135,7 +135,7 @@ const moreMenu: DropdownOption[] = [
 ];
 
 export const navItems: NavItem[] = [
-  { label: "New Arrivals", href: "/collection/new-arrivals" },
+  { label: "New Arrivals", href: "/new-arrivals" },
   { label: "Best Sellers", href: "/collection/best-sellers" },
   { label: "Offers", href: "/collection/sale" },
   {

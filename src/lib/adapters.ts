@@ -7,10 +7,14 @@ import type { SearchProduct } from "@/types/search";
 import type { CollectionProduct } from "@/types/collection";
 import type { ProductDetail } from "@/types/product-detail";
 import type { Product, CartItem } from "@/types/product";
+import {
+  applyProductCardBadges,
+  isNewArrivalProduct,
+} from "@/lib/productBadges";
+import { formatINR } from "@/lib/format";
 
-/** Format INR price number → "₹1,234" */
-export const fmtINR = (n: number): string =>
-  `₹${Math.round(n).toLocaleString("en-IN")}`;
+/** @deprecated Use `formatINR` from `@/lib/format`. */
+export const fmtINR = (n: number): string => formatINR(n);
 
 /** Strip Shopify GID prefix and return the numeric id string. */
 export const numericId = (gid: string): string =>
@@ -27,7 +31,7 @@ export function searchProductToCard(p: SearchProduct): Product {
           ? ("Demi-fine" as const)
           : undefined;
 
-  return {
+  return applyProductCardBadges({
     id: numericId(p.id),
     title: p.name,
     image: p.imageUrl,
@@ -43,9 +47,12 @@ export function searchProductToCard(p: SearchProduct): Product {
     rating: p.rating,
     reviews: p.reviews.review_count,
     badge: p.banner?.text,
+    isNewArrival: p.banner?.text
+      ? isNewArrivalProduct({ tags: [p.banner.text] })
+      : false,
     metals: Array.isArray(p.color) ? p.color : [p.color],
     collection,
-  };
+  });
 }
 
 /** Map a collection-endpoint product to the card's Product shape. */
@@ -58,7 +65,7 @@ export function collectionProductToCard(p: CollectionProduct): Product {
     ? parseFloat(firstVariant.compare_at_price.amount)
     : price;
 
-  return {
+  return applyProductCardBadges({
     id: p.id,
     title: p.title,
     image: p.images?.[0]?.url ?? "",
@@ -68,10 +75,14 @@ export function collectionProductToCard(p: CollectionProduct): Product {
     extraOffers: 0,
     rating: 4.5,
     reviews: 0,
+    isNewArrival: isNewArrivalProduct({
+      tags: p.tags,
+      created_at: p.created_at,
+    }),
     metals: firstVariant?.selected_options
       .filter((o) => o.name === "Color")
       .map((o) => o.value) ?? [],
-  };
+  });
 }
 
 /** Map a full ProductDetail to a CartItem ready for the store. */

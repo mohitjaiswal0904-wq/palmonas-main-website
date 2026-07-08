@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Footer from "@/components/layout/Footer";
 import { ArrowIcon } from "@/components/ui/icons";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CollectionCarousel from "@/components/product/CollectionCarousel";
@@ -8,10 +7,12 @@ import FilterableCollectionCarousel from "@/components/product/FilterableCollect
 import CategoryCircles, {
   type CategoryCircleItem,
 } from "@/components/collection/CategoryCircles";
+import HomeSeoContent from "@/features/home/HomeSeoContent";
 
-const PRODUCT_IMAGE = "/collection/product-earrings.jpg";
+import { PRODUCT_IMAGE } from "@/data/products";
 
 const categories: CategoryCircleItem[] = [
+  { label: "New Arrivals", handle: "new-arrivals", href: "/new-arrivals" },
   { label: "Rings", handle: "rings" },
   { label: "Bracelets", handle: "bracelets" },
   { label: "Men's", handle: "mens-collection" },
@@ -98,7 +99,7 @@ export default function HomePage() {
 
       {/* Categories */}
       <section className="mx-auto w-full max-w-[1380px] px-6 py-14">
-        <CategoryCircles items={categories} />
+        <CategoryCircles items={categories} layout="carousel" />
       </section>
 
       {/* Offers and Discounts */}
@@ -149,15 +150,15 @@ export default function HomePage() {
             title="Crafted in Every Metal"
             subtitle="Explore gold, silver, and demi-fine jewellery"
           />
-          <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="mt-12 -mx-6 flex snap-x snap-mandatory gap-6 overflow-x-auto px-6 pb-4 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-5 sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
             {metalCards.map((card) => (
               <div
                 key={card.title}
-                className="w-[280px] shrink-0 snap-start overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5 sm:w-[340px]"
+                className="w-[400px] shrink-0 snap-start overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/5 sm:w-auto"
               >
                 <Link
                   href={card.href}
-                  className={`group relative flex h-72 items-end justify-center bg-gradient-to-br ${card.gradient} p-6`}
+                  className={`group relative flex h-80 items-end justify-center overflow-hidden rounded-t-3xl bg-gradient-to-br ${card.gradient} p-6`}
                 >
                   <span className="absolute left-1/2 top-6 -translate-x-1/2 text-xl font-semibold text-[#2a2018]">
                     {card.title}
@@ -167,14 +168,14 @@ export default function HomePage() {
                     <ArrowIcon />
                   </span>
                 </Link>
-                <div className="flex flex-nowrap items-center justify-center gap-x-3 px-2 py-4">
+                <div className="flex flex-nowrap items-center justify-center gap-x-2 px-4 py-4">
                   {card.badges.map((badge) => (
                     <span
                       key={badge}
-                      className="flex items-center gap-1.5 whitespace-nowrap text-xs text-[#444]"
+                      className="flex shrink-0 items-center gap-1 whitespace-nowrap text-[10px] leading-none text-[#444] sm:text-[11px]"
                     >
-                      <span className="flex size-5 items-center justify-center rounded-full bg-[#f0e6d2] text-[#b8860b]">
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden>
+                      <span className="flex size-4 shrink-0 items-center justify-center rounded-full bg-[#f0e6d2] text-[#b8860b]">
+                        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden>
                           <path d="m5 12 5 5 9-11" />
                         </svg>
                       </span>
@@ -259,7 +260,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Footer />
+      <HomeSeoContent />
     </div>
   );
 }

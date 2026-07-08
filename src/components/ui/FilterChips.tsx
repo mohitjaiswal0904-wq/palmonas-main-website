@@ -13,6 +13,8 @@ type Props = {
    * when they overflow, instead of wrapping. Always left-aligned.
    */
   scroll?: boolean;
+  /** Rose-blush styling for the new-arrivals landing page. */
+  variant?: "default" | "new-arrival";
 };
 
 /**
@@ -25,6 +27,7 @@ export default function FilterChips({
   onChange,
   align = "center",
   scroll = false,
+  variant = "default",
 }: Props) {
   const [internal, setInternal] = useState(options[0]);
   const active = value ?? internal;
@@ -53,8 +56,12 @@ export default function FilterChips({
             scroll ? "shrink-0 whitespace-nowrap" : ""
           } ${
             active === option
-              ? "border-[#151515] bg-[#151515] text-white"
-              : "border-black/15 bg-white text-[#3a3a3a] hover:border-[#151515] hover:text-[#151515]"
+              ? variant === "new-arrival"
+                ? "border-[#E5D5DC] bg-[#EDE4EA] text-[#8B6B75] shadow-none"
+                : "border-[#151515] bg-[#151515] text-white"
+              : variant === "new-arrival"
+                ? "border-[#EDE4EA] bg-[#FAF7F8] text-[#9B848C] hover:border-[#E5D5DC] hover:text-[#8B6B75]"
+                : "border-black/15 bg-white text-[#3a3a3a] hover:border-[#151515] hover:text-[#151515]"
           }`}
         >
           {option}
