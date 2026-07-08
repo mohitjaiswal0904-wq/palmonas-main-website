@@ -14,6 +14,7 @@ export function productHref(p: Product): string {
     discount: p.discount,
   });
   if (p.collection) params.set("collection", p.collection);
+  if (p.isNewArrival) params.set("new", "1");
   return `/product/${encodeURIComponent(p.id)}?${params.toString()}`;
 }
 

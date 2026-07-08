@@ -15,6 +15,8 @@ export type Product = {
   rating: number;
   reviews: number;
   badge?: string;
+  /** True when the product is part of the new-arrivals assortment. */
+  isNewArrival?: boolean;
   metals: string[];
   /** Collection the product belongs to, used for wishlist / listing filters. */
   collection?: "Gold" | "Silver" | "Demi-fine";

@@ -5,8 +5,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import FilterChips from "@/components/ui/FilterChips";
 import ProductCarousel from "@/components/product/ProductCarousel";
 import ViewAllButton from "@/components/ui/ViewAllButton";
+import { ArrowIcon } from "@/components/ui/icons";
+import Link from "next/link";
 import { useCollection } from "@/hooks/useCollection";
 import { collectionProductToCard } from "@/lib/adapters";
+import { cn } from "@/lib/cn";
 
 export interface FilterChip {
   label: string;
@@ -48,10 +51,16 @@ export default function FilterableCollectionCarousel({
   title,
   chips,
   limit = 12,
+  chipVariant = "default",
+  hideHeading = false,
+  className,
 }: {
   title: string;
   chips: FilterChip[];
   limit?: number;
+  chipVariant?: "default" | "new-arrival";
+  hideHeading?: boolean;
+  className?: string;
 }) {
   const [activeLabel, setActiveLabel] = useState(chips[0]?.label ?? "");
 
@@ -67,11 +76,12 @@ export default function FilterableCollectionCarousel({
   );
 
   return (
-    <section className="w-full px-4 py-12 sm:px-8">
+    <section className={cn("w-full px-4 py-12 sm:px-8", className)}>
       <div className="mb-5 flex flex-col gap-5">
-        <SectionHeading title={title} />
+        {!hideHeading && title ? <SectionHeading title={title} /> : null}
         <FilterChips
           scroll
+          variant={chipVariant}
           options={chips.map((c) => c.label)}
           value={activeLabel}
           onChange={setActiveLabel}
@@ -81,7 +91,19 @@ export default function FilterableCollectionCarousel({
       {loading ? <CarouselSkeleton /> : <ProductCarousel products={products} />}
 
       <div className="mt-6">
-        <ViewAllButton href={`/collection/${activeHandle}`} />
+        {chipVariant === "new-arrival" ? (
+          <div className="flex justify-center">
+            <Link
+              href={`/collection/${activeHandle}`}
+              className="inline-flex items-center gap-2 rounded-full border border-[#E5D5DC] bg-[#EDE4EA] px-7 py-2.5 text-sm font-medium text-[#8B6B75] transition-transform hover:scale-[1.03]"
+            >
+              View All
+              <ArrowIcon />
+            </Link>
+          </div>
+        ) : (
+          <ViewAllButton href={`/collection/${activeHandle}`} />
+        )}
       </div>
     </section>
   );

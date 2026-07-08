@@ -1,4 +1,4 @@
-import GoldPage from "@/components/home/GoldPage";
+import GoldPage from "@/features/gold/GoldPage";
 
 export default function Page() {
   return <GoldPage />;

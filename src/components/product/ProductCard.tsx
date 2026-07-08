@@ -9,6 +9,7 @@ import { cn } from "@/lib/cn";
 import { parsePrice } from "@/lib/format";
 import { productHref } from "@/lib/product";
 import AnimatedBadge from "@/components/product/AnimatedBadge";
+import NewArrivalTag from "@/components/product/NewArrivalTag";
 import type { Product } from "@/types/product";
 
 function StarIcon({ className }: { className?: string }) {
@@ -135,8 +136,10 @@ export default function ProductCard({ product }: { product: Product }) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
 
-        {/* Bestseller / fast-delivery badge (animated swap) */}
-        {product.badge ? (
+        {/* New arrival tag or bestseller / fast-delivery badge */}
+        {product.isNewArrival ? (
+          <NewArrivalTag tone="dark" className="absolute left-0 top-2 z-10" />
+        ) : product.badge ? (
           <AnimatedBadge bestseller={product.badge} className="absolute left-1.5 top-2" />
         ) : null}
 

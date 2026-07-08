@@ -9,6 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-nunito-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-nuosu-sil), ui-serif, serif;
 }
 
 body {
@@ -37,6 +38,121 @@ body {
   .animate-badge-swap {
     animation: none;
   }
+}
+
+/* New Arrivals product tag */
+@keyframes new-arrival-enter {
+  0% {
+    opacity: 0;
+    transform: translateX(-8px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes new-arrival-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes new-arrival-bell {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-12deg);
+  }
+  60% {
+    transform: rotate(8deg);
+  }
+  80% {
+    transform: rotate(-4deg);
+  }
+}
+
+@keyframes new-arrival-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 2px 10px rgba(211, 9, 68, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  }
+  50% {
+    box-shadow:
+      0 4px 14px rgba(211, 9, 68, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+}
+
+.animate-new-arrival-enter {
+  animation: new-arrival-enter 0.55s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.animate-new-arrival-shimmer {
+  background-size: 200% 200%;
+  animation: new-arrival-shimmer 4s ease-in-out infinite;
+}
+
+.animate-new-arrival-bell {
+  animation: new-arrival-bell 2.8s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.animate-new-arrival-glow {
+  animation: new-arrival-glow 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-new-arrival-enter,
+  .animate-new-arrival-shimmer,
+  .animate-new-arrival-bell,
+  .animate-new-arrival-glow,
+  .animate-category-new-arrival-text,
+  .animate-category-new-arrival-pulse {
+    animation: none;
+  }
+}
+
+/* New Arrivals category circle overlay */
+@keyframes category-new-arrival-text {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes category-new-arrival-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.92;
+  }
+}
+
+.animate-category-new-arrival-text {
+  background-size: 200% auto;
+  animation: category-new-arrival-text 2.8s linear infinite;
+}
+
+.animate-category-new-arrival-pulse {
+  animation: category-new-arrival-pulse 2.2s ease-in-out infinite;
 }
 
 /* Mega-menu drawer slide-in from the left */

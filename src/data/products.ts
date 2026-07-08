@@ -4,6 +4,7 @@
  */
 
 import type { Product } from "@/types/product";
+import { shouldShowRandomNewArrivalTag } from "@/lib/productBadges";
 
 const defaultTitles = [
   "Lunar Flow 9KT Gold Earrings",
@@ -66,7 +67,7 @@ export function makeProducts(
     extraOffers: 2,
     rating: 4.5,
     reviews: 125 - (i % 5) * 8,
-    badge: i % 2 === 0 ? "Bestseller" : undefined,
+    isNewArrival: shouldShowRandomNewArrivalTag(`${prefix}-${i + 1}`),
     collection: collectionFor[theme],
     metals:
       theme === "gold"

@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProductCarousel from "@/components/product/ProductCarousel";
+import ReviewsSection from "@/components/product/reviews/ReviewsSection";
 import { useCart } from "@/hooks/useCart";
+import { usePincode } from "@/hooks/usePincode";
 import { useWishlist } from "@/hooks/useWishlist";
 import { useProduct } from "@/hooks/useProduct";
 import { parsePrice } from "@/lib/format";
@@ -14,7 +15,9 @@ import { themeForCollection } from "@/lib/product";
 import { makeProducts } from "@/data/products";
 import { fmtINR } from "@/lib/adapters";
 import { cn } from "@/lib/cn";
+import { isNewArrivalProduct } from "@/lib/productBadges";
 import type { Product } from "@/types/product";
+import NewArrivalTag from "@/components/product/NewArrivalTag";
 
 type Query = Record<string, string | string[] | undefined>;
 
@@ -206,6 +209,7 @@ export default function ProductDetail({
   const router = useRouter();
   const { addItem } = useCart();
   const { has, toggle } = useWishlist();
+  const { pincode, city, serviceable, delivery, openSheet } = usePincode();
 
   // Attempt real API fetch — id may be a Shopify numeric ID or a legacy slug.
   const isNumericId = /^\d+$/.test(id);
@@ -240,6 +244,15 @@ export default function ProductDetail({
 
   const ratingAvg = apiReviews ? parseFloat(apiReviews.avg_rating) : 4.5;
   const ratingCount = apiReviews ? parseInt(apiReviews.review_count, 10) : 128;
+
+  const isNewArrival =
+    (apiProduct
+      ? isNewArrivalProduct({
+          tags: apiProduct.tags,
+          product_tags: apiProduct.product_tags,
+          createdAt: apiProduct.createdAt,
+        })
+      : false) || one(query.new) === "1";
 
   // Build rich accordion data from real API when available.
   const apiAccordions = useMemo(() => {
@@ -360,6 +373,9 @@ export default function ProductDetail({
                     key={i}
                     className="relative aspect-[3/4] w-full shrink-0 snap-center overflow-hidden rounded-2xl bg-[#f6f2ee]"
                   >
+                    {isNewArrival && i === 0 ? (
+                      <NewArrivalTag className="absolute left-0 top-3 z-10" />
+                    ) : null}
                     <Image
                       src={src}
                       alt={`${title} view ${i + 1}`}
@@ -400,6 +416,9 @@ export default function ProductDetail({
                   key={i}
                   className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-[#f6f2ee]"
                 >
+                  {isNewArrival && i === 0 ? (
+                    <NewArrivalTag className="absolute left-0 top-4 z-10" />
+                  ) : null}
                   <Image
                     src={src}
                     alt={`${title} view ${i + 1}`}
@@ -454,11 +473,22 @@ export default function ProductDetail({
             {/* Title */}
             <h1 className="mt-4 text-2xl font-medium text-[#2a2a2a]">{title}</h1>
 
+            {isNewArrival ? (
+              <NewArrivalTag variant="inline" className="mt-3" />
+            ) : null}
+
             {/* Selling fast */}
-            <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-[#fdebc8] px-3 py-1 text-sm font-medium text-[#c2770a]">
-              <BoltIcon />
-              Selling Fast
-            </div>
+            {!isNewArrival ? (
+              <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-[#fdebc8] px-3 py-1 text-sm font-medium text-[#c2770a]">
+                <BoltIcon />
+                Selling Fast
+              </div>
+            ) : (
+              <p className="mt-3 text-sm text-[#6b6b6b]">
+                Part of our latest fresh drops — limited pieces from the new
+                arrivals edit.
+              </p>
+            )}
 
             {/* Cashback banner */}
             <div className="mt-4 flex items-center justify-between gap-2 rounded-lg bg-[#eafaf0] px-3 py-2.5">
@@ -524,56 +554,57 @@ export default function ProductDetail({
             <div className="mt-8">
               <div className="flex items-center justify-between">
                 <span className="text-base">
-                  Deliver To <span className="font-bold">221002</span>
+                  Deliver To{" "}
+                  <span className="font-bold">
+                    {pincode}
+                    {city ? ` · ${city}` : ""}
+                  </span>
                 </span>
-                <button type="button" className="text-sm font-semibold">
+                <button
+                  type="button"
+                  onClick={openSheet}
+                  className="text-sm font-semibold transition-opacity hover:opacity-70"
+                >
                   Change
                 </button>
               </div>
               <div className="mt-3 overflow-hidden rounded-lg border border-[#eee]">
-                <div className="flex items-center gap-2 bg-gradient-to-r from-[#fde2d8] to-white px-3 py-2">
-                  <CartIcon />
-                  <span className="text-sm font-semibold text-[#e0533a]">
-                    NOW
-                  </span>
-                  <span className="text-sm italic text-[#6b6b6b]">
-                    Get it By Today
-                  </span>
-                </div>
-                <div className="px-3 py-2.5 text-sm text-[#404040]">
-                  Free Delivery by <span className="font-semibold">Today</span>.
-                  Order within{" "}
-                  <span className="font-semibold">0 hours 59 minutes.</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Actions (desktop — mobile uses the fixed bottom bar) */}
-            <div className="mt-6 hidden items-center gap-3 lg:flex">
-              <button
-                type="button"
-                onClick={handleAddToCart}
-                className={`flex h-12 flex-1 items-center justify-center gap-2 rounded-lg border-2 text-sm font-semibold transition-colors ${
-                  added
-                    ? "border-[#008236] bg-[#008236] text-white"
-                    : "border-[#151515] text-[#151515] hover:bg-[#151515] hover:text-white"
-                }`}
-              >
-                {added ? (
+                {serviceable ? (
                   <>
-                    <CheckIcon /> Added
+                    <div className="flex items-center gap-2 bg-gradient-to-r from-[#fde2d8] to-white px-3 py-2">
+                      <CartIcon />
+                      {delivery.express ? (
+                        <>
+                          <span className="text-sm font-semibold text-[#e0533a]">
+                            NOW
+                          </span>
+                          <span className="text-sm italic text-[#6b6b6b]">
+                            {delivery.headline}
+                          </span>
+                        </>
+                      ) : (
+                        <span className="text-sm font-semibold text-[#404040]">
+                          {delivery.headline}
+                        </span>
+                      )}
+                    </div>
+                    <div className="px-3 py-2.5 text-sm text-[#404040]">
+                      {delivery.detail}
+                    </div>
                   </>
                 ) : (
-                  "Add to Cart"
+                  <div className="px-3 py-3 text-sm text-[#c51a27]">
+                    Delivery is not available for this pincode.{" "}
+                    <button
+                      type="button"
+                      onClick={openSheet}
+                      className="font-semibold underline"
+                    >
+                      Update pincode
+                    </button>
+                  </div>
                 )}
-              </button>
-              <button
-                type="button"
-                onClick={handleBuyNow}
-                className="h-12 flex-1 rounded-lg bg-[#151515] text-sm font-semibold text-white transition-opacity hover:opacity-90"
-              >
-                Buy Now
-              </button>
+              </div>
             </div>
 
             {/* USPs */}
@@ -632,83 +663,35 @@ export default function ProductDetail({
         <ProductCarousel products={makeProducts(`${id}-look`, 10, theme)} />
       </section>
 
-      {/* Reviews */}
-      <section className="mx-auto w-full max-w-[1320px] px-4 py-12 sm:px-6">
-        <SectionHeading title="Ratings & Reviews" />
-        <div className="mt-10 grid gap-10 lg:grid-cols-[280px_1fr]">
-          <div className="flex flex-col items-center justify-center rounded-2xl bg-[#faf7f4] p-8">
-            <p className="text-5xl font-bold">{ratingAvg.toFixed(1)}</p>
-            <div className="mt-2 flex items-center gap-1">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <StarIcon key={i} />
-              ))}
-            </div>
-            <p className="mt-2 text-sm text-[#8a8a8a]">Based on {ratingCount} reviews</p>
-          </div>
-          <div className="flex flex-col gap-6">
-            {[
-              {
-                name: "Aarohi S.",
-                text: "Absolutely love it — looks premium and hasn't tarnished at all. Perfect for daily wear.",
-              },
-              {
-                name: "Neha K.",
-                text: "Great quality for the price. The size guide was spot on and delivery was super quick.",
-              },
-            ].map((r) => (
-              <div
-                key={r.name}
-                className="border-b border-[#ededed] pb-6 last:border-0"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-0.5">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <StarIcon key={i} />
-                    ))}
-                  </div>
-                  <span className="text-sm font-semibold">{r.name}</span>
-                </div>
-                <p className="mt-2 text-sm leading-relaxed text-[#525252]">
-                  {r.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="mt-8 flex justify-center">
-          <Link
-            href="/collection"
-            className="rounded-full border border-[#151515] px-7 py-2.5 text-sm font-medium transition-colors hover:bg-[#151515] hover:text-white"
-          >
-            Continue Shopping
-          </Link>
-        </div>
-      </section>
+      {/* Ratings & Reviews */}
+      <ReviewsSection avg={ratingAvg} count={ratingCount} />
 
-      {/* Fixed action bar (mobile only) */}
-      <div className="fixed inset-x-0 bottom-0 z-40 flex items-center gap-3 border-t border-black/10 bg-white px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] lg:hidden">
-        <button
-          type="button"
-          onClick={handleBuyNow}
-          className="h-12 flex-1 rounded-lg border-2 border-[#151515] text-sm font-semibold text-[#151515]"
-        >
-          Buy Now
-        </button>
-        <button
-          type="button"
-          onClick={handleAddToCart}
-          className={`flex h-12 flex-1 items-center justify-center gap-2 rounded-lg text-sm font-semibold text-white transition-colors ${
-            added ? "bg-[#008236]" : "bg-[#151515]"
-          }`}
-        >
-          {added ? (
-            <>
-              <CheckIcon /> Added
-            </>
-          ) : (
-            "Add to Cart"
-          )}
-        </button>
+      {/* Fixed action bar */}
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-black/10 bg-white px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:px-6 lg:px-10">
+        <div className="mx-auto flex w-full max-w-[1640px] items-center justify-end gap-3 lg:gap-4">
+          <button
+            type="button"
+            onClick={handleBuyNow}
+            className="h-12 flex-1 rounded-lg border-2 border-[#151515] text-sm font-semibold text-[#151515] transition-colors hover:bg-[#151515] hover:text-white lg:flex-none lg:min-w-[200px]"
+          >
+            Buy Now
+          </button>
+          <button
+            type="button"
+            onClick={handleAddToCart}
+            className={`flex h-12 flex-1 items-center justify-center gap-2 rounded-lg text-sm font-semibold text-white transition-colors lg:flex-none lg:min-w-[200px] ${
+              added ? "bg-[#008236]" : "bg-[#151515] hover:opacity-90"
+            }`}
+          >
+            {added ? (
+              <>
+                <CheckIcon /> Added
+              </>
+            ) : (
+              "Add to Cart"
+            )}
+          </button>
+        </div>
       </div>
     </main>
   );
