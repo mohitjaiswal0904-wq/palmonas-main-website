@@ -875,7 +875,7 @@ export default function NpsSurveyForm() {
 
             <fieldset className="mt-6">
               <legend className="text-sm font-medium text-[#151515]">
-                Add remarks?
+                Add remarks? (optional)
               </legend>
               <div className="mt-3 flex gap-2">
                 {(["yes", "no"] as const).map((option) => (
@@ -910,7 +910,6 @@ export default function NpsSurveyForm() {
               onBack={() => goTo(showDetails ? "details" : "score")}
               onNext={() => goTo("done")}
               nextLabel="Submit feedback"
-              nextDisabled={remarksEnabled === null}
             />
           </div>
         ) : null}
