@@ -14,6 +14,7 @@ export interface CategoryCircleItem {
 }
 
 const DEFAULT_IMAGE = "/collection/product-earrings.jpg";
+const NEW_ARRIVALS_IMAGE = "/collection/new-arrivals-circle.png";
 
 function categoryHref(item: CategoryCircleItem) {
   return item.href ?? `/collection/${item.handle}`;
@@ -39,7 +40,7 @@ function NewArrivalAnimatedText({
     >
       <span
         className={cn(
-          "block font-bold text-[#D30944]",
+          "block font-bold text-[#EE284C]",
         )}
       >
         {children}
@@ -81,6 +82,8 @@ function CircleThumb({
   bgClassName: string;
   ringClassName: string;
 }) {
+  const isNewArrival = isNewArrivalsItem(item);
+
   return (
     <div
       className={cn(
@@ -91,11 +94,11 @@ function CircleThumb({
       )}
     >
       <Image
-        src={item.image ?? DEFAULT_IMAGE}
+        src={isNewArrival ? NEW_ARRIVALS_IMAGE : (item.image ?? DEFAULT_IMAGE)}
         alt={item.label}
         fill
         sizes="144px"
-        className="object-cover"
+        className={isNewArrival ? "object-contain p-1" : "object-cover"}
       />
     </div>
   );

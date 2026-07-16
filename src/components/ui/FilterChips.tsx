@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { newArrivalsGradientClass } from "@/features/new-arrivals/constants/theme";
 
 type Props = {
   options: string[];
@@ -57,10 +58,10 @@ export default function FilterChips({
           } ${
             active === option
               ? variant === "new-arrival"
-                ? "border-[#E5D5DC] bg-[#EDE4EA] text-[#8B6B75] shadow-none"
+                ? `border-transparent text-white shadow-none ${newArrivalsGradientClass}`
                 : "border-[#151515] bg-[#151515] text-white"
               : variant === "new-arrival"
-                ? "border-[#EDE4EA] bg-[#FAF7F8] text-[#9B848C] hover:border-[#E5D5DC] hover:text-[#8B6B75]"
+                ? "border-[#EE284C]/25 bg-white/90 text-[#EE284C] hover:border-[#EE284C]/40 hover:bg-white"
                 : "border-black/15 bg-white text-[#3a3a3a] hover:border-[#151515] hover:text-[#151515]"
           }`}
         >

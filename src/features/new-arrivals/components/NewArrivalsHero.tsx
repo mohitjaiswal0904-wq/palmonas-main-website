@@ -21,28 +21,28 @@ export default function NewArrivalsHero() {
         aria-hidden
         style={{
           backgroundImage:
-            "linear-gradient(128deg, rgba(253,248,250,0.15) 0%, rgba(245,235,238,0.2) 48%, rgba(243,239,248,0.25) 100%)",
+            "linear-gradient(128deg, rgba(242,85,35,0.25) 0%, rgba(238,40,76,0.35) 100%)",
         }}
       />
       <div className="relative mx-auto flex h-full max-w-[1280px] flex-col items-center justify-center px-6 text-center">
-        <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-[#9B848C] sm:text-sm">
+        <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-white/80 sm:text-sm">
           Just Dropped
         </p>
         <h1
           className={cn(
             headingClassName,
-            "max-w-3xl text-4xl font-bold capitalize leading-tight text-[#151515] sm:text-6xl lg:text-7xl",
+            "max-w-3xl text-4xl font-bold capitalize leading-tight text-white sm:text-6xl lg:text-7xl",
           )}
         >
           New Arrivals
         </h1>
-        <p className="mt-4 max-w-xl text-sm text-[#6B5B5B] sm:mt-5 sm:text-lg">
+        <p className="mt-4 max-w-xl text-sm text-white/85 sm:mt-5 sm:text-lg">
           The freshest styles in Demifine®, gold, and silver — curated for the
           way you wear jewellery today.
         </p>
         <Link
           href="/collection/new-arrivals"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#151515] px-7 py-3 text-sm font-medium text-white transition-transform hover:scale-[1.03] sm:mt-8"
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-medium text-[#EE284C] transition-transform hover:scale-[1.03] sm:mt-8"
         >
           Shop all new arrivals
           <ArrowIcon />

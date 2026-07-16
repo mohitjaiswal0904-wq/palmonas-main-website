@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon } from "@/components/ui/icons";
 import { PRODUCT_IMAGE } from "@/data/products";
+import { NEW_ARRIVALS_GRADIENT } from "@/features/new-arrivals/constants/theme";
 import { cn } from "@/lib/cn";
 import { headingClassName } from "@/features/new-arrivals/constants/fonts";
 
@@ -9,7 +10,10 @@ export default function ThisWeekBanner() {
   return (
     <section className="py-6 sm:py-8">
       <div className="mx-auto w-full max-w-[1380px] px-6">
-        <div className="relative flex h-[220px] items-center overflow-hidden rounded-2xl bg-[#151515] sm:h-[280px]">
+        <div
+          className="relative flex h-[220px] items-center overflow-hidden rounded-2xl sm:h-[280px]"
+          style={{ backgroundImage: NEW_ARRIVALS_GRADIENT }}
+        >
           <div className="relative z-10 max-w-md px-8 sm:px-12">
             <p
               className={cn(
@@ -29,7 +33,7 @@ export default function ThisWeekBanner() {
             </h3>
             <Link
               href="/collection/new-arrivals"
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-medium text-[#151515] transition-transform hover:scale-[1.03]"
+              className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-medium text-[#EE284C] transition-transform hover:scale-[1.03]"
             >
               View collection
               <ArrowIcon />

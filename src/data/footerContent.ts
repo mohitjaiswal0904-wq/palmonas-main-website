@@ -20,6 +20,7 @@ export const footerLinkColumns = [
       "Privacy Policy",
       "Track Order",
       "Return & Exchange",
+      "NPS Form",
     ],
   },
   {
@@ -116,6 +117,11 @@ export const footerPopularSearches = [
     ],
   },
 ] as const;
+
+/** Custom hrefs for footer links that aren't placeholder `#` links. */
+export const footerLinkHrefs: Record<string, string> = {
+  "NPS Form": "/nps",
+};
 
 export const footerCompany = {
   name: "Demifine® FASHION PVT LTD",
