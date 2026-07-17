@@ -102,66 +102,37 @@ const MOOD_BY_SCORE: Record<
   10: { emoji: "🥰", label: "Very happy" },
 };
 
-function MoodFace({ score }: { score: number | null }) {
-  const mood =
-    score === null
-      ? { emoji: "🤔", label: "Tap a star to rate" }
-      : MOOD_BY_SCORE[score];
-
-  return (
-    <div className="mx-auto flex flex-col items-center">
-      <span
-        key={score ?? "empty"}
-        className="animate-nps-xp-pop text-7xl leading-none sm:text-8xl"
-        role="img"
-        aria-label={mood.label}
-      >
-        {mood.emoji}
-      </span>
-      <p
-        key={`label-${score ?? "empty"}`}
-        className="animate-nps-xp-pop mt-3 text-sm font-medium text-[#151515]"
-      >
-        {mood.label}
-      </p>
-    </div>
-  );
+function scoreSegmentColor(value: number): string {
+  const hue = (value / 10) * 125;
+  return `hsl(${hue} 78% 48%)`;
 }
 
-function StarIcon({
-  filled,
-  className,
-  style,
-}: {
-  filled: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-}) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className={className}
-      style={style}
-      aria-hidden
-    >
-      <path
-        d="M12 2.5l2.7 6.2 6.8.6-5.2 4.5 1.6 6.6L12 16.8 6.1 20.4l1.6-6.6L2.5 9.3l6.8-.6L12 2.5z"
-        fill={filled ? "currentColor" : "none"}
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+function polar(cx: number, cy: number, r: number, angleRad: number) {
+  return {
+    x: cx + r * Math.cos(angleRad),
+    y: cy - r * Math.sin(angleRad),
+  };
 }
 
-function moodStarColor(score: number | null): string {
-  if (score === null) return "#d4d4d4";
-  if (score <= 2) return "#c0392b"; // very sad
-  if (score <= 4) return "#d35400"; // sad / not great
-  if (score <= 6) return "#c9a227"; // okay
-  if (score <= 8) return "#27ae60"; // pretty good
-  return "#1a7f37"; // very happy
+function wedgePath(
+  cx: number,
+  cy: number,
+  innerR: number,
+  outerR: number,
+  startAngle: number,
+  endAngle: number,
+) {
+  const startOuter = polar(cx, cy, outerR, startAngle);
+  const endOuter = polar(cx, cy, outerR, endAngle);
+  const startInner = polar(cx, cy, innerR, endAngle);
+  const endInner = polar(cx, cy, innerR, startAngle);
+  return [
+    `M ${startOuter.x} ${startOuter.y}`,
+    `A ${outerR} ${outerR} 0 0 1 ${endOuter.x} ${endOuter.y}`,
+    `L ${startInner.x} ${startInner.y}`,
+    `A ${innerR} ${innerR} 0 0 0 ${endInner.x} ${endInner.y}`,
+    "Z",
+  ].join(" ");
 }
 
 function ScorePicker({
@@ -173,81 +144,97 @@ function ScorePicker({
 }) {
   const [hovered, setHovered] = useState<number | null>(null);
   const displayScore = hovered ?? score;
-  const activeColor = moodStarColor(displayScore);
+  const mood =
+    displayScore === null
+      ? { emoji: "🤔", label: "Pick a score" }
+      : MOOD_BY_SCORE[displayScore];
+
+  const size = 340;
+  const viewH = 210;
+  const cx = size / 2;
+  const cy = 178;
+  const outerR = 150;
+  const midR = 118;
+  const innerR = 84;
+  const segmentSweep = Math.PI / 11;
+  const gap = 0.018;
+  const emojiTop = `${(cy / viewH) * 100}%`;
 
   return (
-    <div className="mt-6">
-      <MoodFace score={displayScore} />
-
+    <div className="mt-8">
       <div
-        className="mt-5 flex items-end justify-between gap-0.5 sm:gap-1"
+        className="relative mx-auto w-full max-w-[360px]"
         onMouseLeave={() => setHovered(null)}
       >
-        {Array.from({ length: 11 }, (_, value) => {
-          const active = displayScore !== null && value <= displayScore;
-          const selected = score === value;
-          const starColor = active
-            ? moodStarColor(value)
-            : "#d4d4d4";
-          return (
-            <button
-              key={value}
-              type="button"
-              aria-label={`Rate ${value} out of 10`}
-              aria-pressed={selected}
-              onMouseEnter={() => setHovered(value)}
-              onFocus={() => setHovered(value)}
-              onClick={() => onChange(value)}
-              className={cn(
-                "group flex flex-1 flex-col items-center gap-1.5 rounded-xl py-1 transition-transform duration-150",
-                selected ? "scale-110" : "hover:scale-105",
-              )}
-            >
-              <StarIcon
-                filled={active}
-                className="size-6 transition-colors duration-200 sm:size-7"
-                style={{ color: starColor }}
-              />
-              <span
-                className={cn(
-                  "text-[10px] font-medium transition-colors duration-200 sm:text-xs",
-                  selected || active ? "font-semibold" : "text-[#aaa]",
-                )}
-                style={
-                  selected || active
-                    ? { color: moodStarColor(value) }
-                    : undefined
-                }
-              >
-                {value}
-              </span>
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="mt-2 flex justify-between text-xs text-[#888]">
-        <span style={{ color: moodStarColor(0) }}>Very sad</span>
-        <span style={{ color: moodStarColor(10) }}>Very happy</span>
-      </div>
-
-      {score !== null ? (
-        <p
-          key={score}
-          className="animate-nps-xp-pop mt-4 text-center text-sm text-[#666]"
+        <svg
+          viewBox={`0 0 ${size} ${viewH}`}
+          className="w-full overflow-visible"
+          role="img"
+          aria-label="Score from 0 to 10"
         >
-          Score{" "}
-          <span className="font-semibold" style={{ color: activeColor }}>
-            {score}/10
+          {Array.from({ length: 11 }, (_, value) => {
+            const startAngle = Math.PI - value * segmentSweep - gap / 2;
+            const endAngle = Math.PI - (value + 1) * segmentSweep + gap / 2;
+            const midAngle = (startAngle + endAngle) / 2;
+            const selected = score === value;
+            const color = scoreSegmentColor(value);
+            const labelPos = polar(cx, cy, (outerR + midR) / 2 + 1, midAngle);
+
+            return (
+              <g key={value}>
+                <path
+                  d={wedgePath(cx, cy, midR, outerR, startAngle, endAngle)}
+                  fill={selected ? color : "#eef0f2"}
+                  className="cursor-pointer outline-none transition-[fill] duration-150"
+                  style={{ outline: "none" }}
+                  onMouseEnter={() => setHovered(value)}
+                  onClick={() => onChange(value)}
+                />
+                <path
+                  d={wedgePath(cx, cy, innerR, midR - 3, startAngle, endAngle)}
+                  fill={color}
+                  opacity={0.9}
+                  className="pointer-events-none"
+                />
+                <text
+                  x={labelPos.x}
+                  y={labelPos.y}
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fill={selected ? "#ffffff" : "#6b7280"}
+                  style={{
+                    fontSize: 14,
+                    fontWeight: 600,
+                    pointerEvents: "none",
+                    userSelect: "none",
+                  }}
+                >
+                  {value}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+
+        <div
+          className="pointer-events-none absolute left-1/2 flex size-[92px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#eceef1] sm:size-[104px]"
+          style={{ top: emojiTop }}
+        >
+          <span
+            key={displayScore ?? "empty"}
+            className="animate-nps-xp-pop text-5xl leading-none sm:text-[56px]"
+            role="img"
+            aria-label={mood.label}
+          >
+            {mood.emoji}
           </span>
-          {" — "}
-          {score <= 6
-            ? "We'll dig into what went wrong"
-            : score <= 8
-              ? "Almost there — help us level up"
-              : "You're a Palmonas champion"}
-        </p>
-      ) : null}
+        </div>
+      </div>
+
+      <div className="mx-auto -mt-1 flex w-full max-w-[320px] justify-between px-1 text-sm text-[#9ca3af]">
+        <span>Unlikely</span>
+        <span>Likely</span>
+      </div>
     </div>
   );
 }
@@ -610,15 +597,19 @@ export default function NpsSurveyForm() {
 
         {step === "score" && activeType ? (
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#9b848c]">
-              {QUEST_LABELS[feedbackType!].title}
-            </p>
-            <h2 className="mt-2 font-heading text-2xl text-[#151515]">
-              Rate your experience
-            </h2>
-            <p className="mt-1 text-sm text-[#666]">
-              {activeType.primaryQuestion}
-            </p>
+            <div className="space-y-2">
+              <h2 className="font-heading text-2xl leading-snug text-[#151515] sm:text-[28px]">
+                {activeType.primaryQuestion}
+                {activeType.primaryQuestion.endsWith("?") ||
+                activeType.primaryQuestion.endsWith(".")
+                  ? ""
+                  : "?"}
+              </h2>
+              <p className="text-sm text-[#666]">
+                Complete and earn{" "}
+                <span className="font-bold text-[#151515]">100 Coins</span>
+              </p>
+            </div>
             <ScorePicker
               score={score}
               onChange={(value) => {
