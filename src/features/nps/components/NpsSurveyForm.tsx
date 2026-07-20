@@ -176,7 +176,9 @@ function ScorePicker({
             const startAngle = Math.PI - value * segmentSweep - gap / 2;
             const endAngle = Math.PI - (value + 1) * segmentSweep + gap / 2;
             const midAngle = (startAngle + endAngle) / 2;
-            const selected = score === value;
+            const filled =
+              displayScore !== null && value <= displayScore;
+            const isExact = score === value;
             const color = scoreSegmentColor(value);
             const labelPos = polar(cx, cy, (outerR + midR) / 2 + 1, midAngle);
 
@@ -184,7 +186,7 @@ function ScorePicker({
               <g key={value}>
                 <path
                   d={wedgePath(cx, cy, midR, outerR, startAngle, endAngle)}
-                  fill={selected ? color : "#eef0f2"}
+                  fill={filled ? color : "#eef0f2"}
                   className="cursor-pointer outline-none transition-[fill] duration-150"
                   style={{ outline: "none" }}
                   onMouseEnter={() => setHovered(value)}
@@ -193,18 +195,18 @@ function ScorePicker({
                 <path
                   d={wedgePath(cx, cy, innerR, midR - 3, startAngle, endAngle)}
                   fill={color}
-                  opacity={0.9}
-                  className="pointer-events-none"
+                  opacity={filled ? 1 : 0.35}
+                  className="pointer-events-none transition-opacity duration-150"
                 />
                 <text
                   x={labelPos.x}
                   y={labelPos.y}
                   textAnchor="middle"
                   dominantBaseline="central"
-                  fill={selected ? "#ffffff" : "#6b7280"}
+                  fill={filled ? "#ffffff" : "#6b7280"}
                   style={{
                     fontSize: 14,
-                    fontWeight: 600,
+                    fontWeight: isExact ? 700 : 600,
                     pointerEvents: "none",
                     userSelect: "none",
                   }}
