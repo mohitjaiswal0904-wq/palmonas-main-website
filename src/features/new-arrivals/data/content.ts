@@ -1,4 +1,5 @@
 import type { CategoryCircleItem } from "@/components/collection/CategoryCircles";
+import { NEW_ARRIVALS_GRADIENT } from "@/features/new-arrivals/constants/theme";
 
 export const HERO_IMAGE = "/new-arrivals/hero.png";
 
@@ -25,12 +26,12 @@ export const curatedEdits = [
   {
     label: "Breakfast in Paris",
     handle: "emily-in-paris",
-    gradient: "linear-gradient(149deg, #FDF2F4 0%, #F5D5DC 100%)",
+    gradient: NEW_ARRIVALS_GRADIENT,
   },
   {
     label: "Emily in Paris",
     handle: "emily-in-paris",
-    gradient: "linear-gradient(149deg, #F3EAF8 0%, #E5C1FF 100%)",
+    gradient: NEW_ARRIVALS_GRADIENT,
   },
   {
     label: "Everyday Essentials",
@@ -40,7 +41,7 @@ export const curatedEdits = [
   {
     label: "Heart Collection",
     handle: "heart-collection",
-    gradient: "linear-gradient(149deg, #FAF6F8 0%, #F0E4EA 100%)",
+    gradient: NEW_ARRIVALS_GRADIENT,
   },
 ];
 
@@ -70,7 +71,6 @@ export const metalDrops = [
     title: "New in Demifine",
     subtitle: "Anti-tarnish everyday luxury",
     href: "/collection/demi-fine-jewellery",
-    gradient:
-      "linear-gradient(149deg, #FAF6F8 0%, #F7F1F4 21%, #F4EBEF 43%, #F0E4EA 64%, #E5D5DC 100%)",
+    gradient: NEW_ARRIVALS_GRADIENT,
   },
 ];

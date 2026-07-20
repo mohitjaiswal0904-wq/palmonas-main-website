@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { newArrivalsGradientClass } from "@/features/new-arrivals/constants/theme";
 import { cn } from "@/lib/cn";
 
 export default function GradientBadge({
@@ -12,13 +13,11 @@ export default function GradientBadge({
     <span
       className={cn(
         "inline-flex -rotate-[8.76deg] items-center justify-center rounded px-1.5 py-0.5",
-        "bg-[linear-gradient(265deg,#FFD6D6_2%,#E5C1FF_98%)]",
+        newArrivalsGradientClass,
         className,
       )}
     >
-      <span className="text-xs font-bold text-[#151515] sm:text-sm">
-        {children}
-      </span>
+      <span className="text-xs font-bold text-white sm:text-sm">{children}</span>
     </span>
   );
 }

@@ -15,7 +15,7 @@ export default function CuratedEditCard({
   return (
     <Link
       href={`/collection/${handle}`}
-      className="group relative block aspect-square overflow-hidden rounded-2xl shadow-[0_0_0_1px_#EDE4EA]"
+      className="group relative block aspect-square overflow-hidden rounded-2xl shadow-[0_0_0_1px_rgba(238,40,76,0.2)]"
       style={{ backgroundImage: gradient }}
     >
       <div className="relative h-full w-full">

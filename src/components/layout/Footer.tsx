@@ -4,8 +4,13 @@ import { ChevronDownIcon } from "@/components/ui/icons";
 import {
   footerCompany,
   footerLinkColumns,
+  footerLinkHrefs,
   footerPopularSearches,
 } from "@/data/footerContent";
+
+function footerHref(label: string) {
+  return footerLinkHrefs[label] ?? "#";
+}
 
 function FooterLinkColumn({
   title,
@@ -26,7 +31,7 @@ function FooterLinkColumn({
         {links.map((link) => (
           <li key={link}>
             <Link
-              href="#"
+              href={footerHref(link)}
               className="text-[13px] leading-[22px] text-[#868686] transition-colors hover:text-[#444]"
             >
               {link}
@@ -55,7 +60,7 @@ function FooterAccordionColumn({
         {links.map((link) => (
           <li key={link}>
             <Link
-              href="#"
+              href={footerHref(link)}
               className="text-[13px] leading-[22px] text-[#868686] transition-colors hover:text-[#444]"
             >
               {link}

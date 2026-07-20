@@ -9,6 +9,7 @@ import { ArrowIcon } from "@/components/ui/icons";
 import Link from "next/link";
 import { useCollection } from "@/hooks/useCollection";
 import { collectionProductToCard } from "@/lib/adapters";
+import { newArrivalsGradientClass } from "@/features/new-arrivals/constants/theme";
 import { cn } from "@/lib/cn";
 
 export interface FilterChip {
@@ -53,6 +54,7 @@ export default function FilterableCollectionCarousel({
   limit = 12,
   chipVariant = "default",
   hideHeading = false,
+  headingLight = false,
   className,
 }: {
   title: string;
@@ -60,6 +62,8 @@ export default function FilterableCollectionCarousel({
   limit?: number;
   chipVariant?: "default" | "new-arrival";
   hideHeading?: boolean;
+  /** White heading text for use on gradient section backgrounds. */
+  headingLight?: boolean;
   className?: string;
 }) {
   const [activeLabel, setActiveLabel] = useState(chips[0]?.label ?? "");
@@ -78,7 +82,13 @@ export default function FilterableCollectionCarousel({
   return (
     <section className={cn("w-full px-4 py-12 sm:px-8", className)}>
       <div className="mb-5 flex flex-col gap-5">
-        {!hideHeading && title ? <SectionHeading title={title} /> : null}
+        {!hideHeading && title ? (
+          <SectionHeading
+            title={title}
+            titleClassName={headingLight ? "text-white" : undefined}
+            subtitleClassName={headingLight ? "text-white/80" : undefined}
+          />
+        ) : null}
         <FilterChips
           scroll
           variant={chipVariant}
@@ -95,7 +105,10 @@ export default function FilterableCollectionCarousel({
           <div className="flex justify-center">
             <Link
               href={`/collection/${activeHandle}`}
-              className="inline-flex items-center gap-2 rounded-full border border-[#E5D5DC] bg-[#EDE4EA] px-7 py-2.5 text-sm font-medium text-[#8B6B75] transition-transform hover:scale-[1.03]"
+              className={cn(
+                "inline-flex items-center gap-2 rounded-full px-7 py-2.5 text-sm font-medium text-white transition-transform hover:scale-[1.03]",
+                newArrivalsGradientClass,
+              )}
             >
               View All
               <ArrowIcon />
