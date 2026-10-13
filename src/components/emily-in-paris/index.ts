@@ -1,9 +1,0 @@
-export { EmilyInParisCategoryPills } from '@/components/emily-in-paris/EmilyInParisCategoryPills';
-export { EmilyInParisHashtagMarquee } from '@/components/emily-in-paris/EmilyInParisHashtagMarquee';
-export { EmilyInParisHero } from '@/components/emily-in-paris/EmilyInParisHero';
-export { EmilyInParisLifestyleGallery } from '@/components/emily-in-paris/EmilyInParisLifestyleGallery';
-export { EmilyInParisPromoBanner } from '@/components/emily-in-paris/EmilyInParisPromoBanner';
-export { EmilyInParisPageContent } from '@/components/emily-in-paris/EmilyInParisPageContent';
-export { EmilyInParisPageSkeleton } from '@/components/emily-in-paris/EmilyInParisPageSkeleton';
-export { EmilyInParisStaticSections } from '@/components/emily-in-paris/EmilyInParisStaticSections';
-export { EmilyInParisSectionHeading } from '@/components/emily-in-paris/EmilyInParisSectionHeading';

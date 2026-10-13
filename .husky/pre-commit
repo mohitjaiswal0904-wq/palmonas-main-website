@@ -1,6 +1,0 @@
-#!/bin/sh
-set -e
-
-pnpm exec lint-staged
-pnpm type-check
-sh scripts/with-build-env.sh pnpm build
