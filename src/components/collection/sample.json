@@ -1,0 +1,1656 @@
+{
+  "status": 200,
+  "message": "Products from collection 'vacay-mode' retrieved successfully (cached)",
+  "data": {
+    "collection_handle": "vacay-mode",
+    "collection_title": "Vacay Mode",
+    "collection_type": "NORMAL",
+    "collection_image": null,
+    "products": [
+      {
+        "id": "9043668861185",
+        "name": "Textured Disc Open Ring",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_69_18514e0c-dd93-4af0-b8f0-981f00071fb3.jpg?v=1772802518",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 3.0,
+        "reviews": {
+          "avg_rating": 3.0,
+          "review_count": 2
+        },
+        "variants": [
+          {
+            "id": "48169982296321",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "ratingBadge": {
+          "backgroundColor": "#F5F5F5",
+          "textColor": "#1F2937",
+          "starColor": "#FF9900",
+          "position": "top-right"
+        },
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9043668238593",
+        "name": "Spiral Ribbed Hoop Earrings",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_6_42ee9992-d47c-431a-99a4-a9894db7ae33.jpg?v=1773658038",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2029,
+        "originalPrice": 2434,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 5.0,
+        "reviews": {
+          "avg_rating": 5.0,
+          "review_count": 3
+        },
+        "variants": [
+          {
+            "id": "48169981509889",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2029,
+            "compareAtPrice": 2434,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "ratingBadge": {
+          "backgroundColor": "#F5F5F5",
+          "textColor": "#1F2937",
+          "starColor": "#FF9900",
+          "position": "top-right"
+        },
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9043667026177",
+        "name": "Crystal Frame Hoop Earrings",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_5715f1d6-19b3-4238-8022-18642aff3333.jpg?v=1772803905",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 3079,
+        "originalPrice": 3694,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.7,
+        "reviews": {
+          "avg_rating": 4.7,
+          "review_count": 3
+        },
+        "variants": [
+          {
+            "id": "48169979117825",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 3079,
+            "compareAtPrice": 3694,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "ratingBadge": {
+          "backgroundColor": "#F5F5F5",
+          "textColor": "#1F2937",
+          "starColor": "#FF9900",
+          "position": "top-right"
+        },
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9043666272513",
+        "name": "Black Bunny Hoop Earrings",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_48443847-b729-4da4-b025-e12f5ec5350b.jpg?v=1772804750",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2239,
+        "originalPrice": 2686,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 5.0,
+        "reviews": {
+          "avg_rating": 5.0,
+          "review_count": 1
+        },
+        "variants": [
+          {
+            "id": "48169978298625",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2239,
+            "compareAtPrice": 2686,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "ratingBadge": {
+          "backgroundColor": "#F5F5F5",
+          "textColor": "#1F2937",
+          "starColor": "#FF9900",
+          "position": "top-right"
+        },
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9043666108673",
+        "name": "Gold Disc Charm Chain Bracelet",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_ce9afc47-8a69-4deb-983a-425573230c99.jpg?v=1772805161",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2029,
+        "originalPrice": 2434,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 956
+        },
+        "variants": [
+          {
+            "id": "48169977741569",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2029,
+            "compareAtPrice": 2434,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9043666075905",
+        "name": "Gold Geometric Link Bracelet",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_6ca9dd6c-5868-4fbd-abb9-6df59910a339.jpg?v=1772805170",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 4409,
+        "originalPrice": 5290,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 177
+        },
+        "variants": [
+          {
+            "id": "48169977708801",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 4409,
+            "compareAtPrice": 5290,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9043666043137",
+        "name": "Luna Drop Gold Chain Bracelet",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_970c0042-7520-4526-a296-a34b8d590d42.jpg?v=1772805190",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2029,
+        "originalPrice": 2434,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 154
+        },
+        "variants": [
+          {
+            "id": "48169977676033",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2029,
+            "compareAtPrice": 2434,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9037218447617",
+        "name": "Enchanted Crystal Serpent Necklace",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_a044a270-5800-4a7b-92d9-fd584b3be210.jpg?v=1772190301",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 315
+        },
+        "variants": [
+          {
+            "id": "48097299661057",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9037218283777",
+        "name": "Regal Emerald Spark Necklace",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_e6dc9060-e749-481b-bb16-1f2df64ea6f3.jpg?v=1772190929",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 544
+        },
+        "variants": [
+          {
+            "id": "48097299464449",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9037218087169",
+        "name": "Serpent Heart Pendant Necklace",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_7477208b-d8b1-4284-8abb-f426eb593f2d.jpg?v=1772176955",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 726
+        },
+        "variants": [
+          {
+            "id": "48097299235073",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9037217988865",
+        "name": "Glam Serpent Spark Necklace",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_29e59def-5d74-404a-adf4-d4d53192e605.jpg?v=1772188524",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 250
+        },
+        "variants": [
+          {
+            "id": "48097299136769",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9037217267969",
+        "name": "Antler Heart Motif Necklace",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_4c537c34-6558-4a6c-9f66-28413e72968d.jpg?v=1772188828",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 5.0,
+        "reviews": {
+          "avg_rating": 5.0,
+          "review_count": 1
+        },
+        "variants": [
+          {
+            "id": "48097298284801",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "ratingBadge": {
+          "backgroundColor": "#F5F5F5",
+          "textColor": "#1F2937",
+          "starColor": "#FF9900",
+          "position": "top-right"
+        },
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9037217136897",
+        "name": "Chic Edge Mini Charm Necklace",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_83582aad-a7c2-4601-a983-6a4d857b9892.jpg?v=1772179777",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 677
+        },
+        "variants": [
+          {
+            "id": "48097298120961",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9037217071361",
+        "name": "Forever Smiley Linked Necklace",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_b2174b03-a902-4430-9fd3-a7fa48c5ddc3.jpg?v=1772429740",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 792
+        },
+        "variants": [
+          {
+            "id": "48097298055425",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9037214974209",
+        "name": "Chic Crystal Drop Threaders",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_8391f411-2b38-404b-8452-43d01603455e.jpg?v=1772176234",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 366
+        },
+        "variants": [
+          {
+            "id": "48097295499521",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9024523239681",
+        "name": "Trio Shine Chain Bracelet",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_8637fa08-e0c7-45d1-b094-c128833fec36.jpg?v=1772042122",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2029,
+        "originalPrice": 2434,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 968
+        },
+        "variants": [
+          {
+            "id": "48052518355201",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2029,
+            "compareAtPrice": 2434,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9024522977537",
+        "name": "Halo Orbit Tassel Earrings",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify1_0dbc6256-93ea-4fc6-be90-9451e1998f6f.jpg?v=1770624449",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2029,
+        "originalPrice": 2434,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 4
+        },
+        "variants": [
+          {
+            "id": "48052518060289",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2029,
+            "compareAtPrice": 2434,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "ratingBadge": {
+          "backgroundColor": "#F5F5F5",
+          "textColor": "#1F2937",
+          "starColor": "#FF9900",
+          "position": "top-right"
+        },
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9024521830657",
+        "name": "Soft Spark Chain Bracelet",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_962111ee-1c19-4726-a69f-5041238a7962.jpg?v=1772041207",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2309,
+        "originalPrice": 2770,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 5.0,
+        "reviews": {
+          "avg_rating": 5.0,
+          "review_count": 1
+        },
+        "variants": [
+          {
+            "id": "48052516126977",
+            "sku": null,
+            "name": "GOLD",
+            "title": "GOLD",
+            "color": [],
+            "price": 2309,
+            "compareAtPrice": 2770,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "ratingBadge": {
+          "backgroundColor": "#F5F5F5",
+          "textColor": "#1F2937",
+          "starColor": "#FF9900",
+          "position": "top-right"
+        },
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9014562291969",
+        "name": "Bold Anchor Line Ring",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_8776f0bf-020f-49d3-b9a4-ecb725e1eef7.jpg?v=1770377324",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2379,
+        "originalPrice": 2854,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 5.0,
+        "reviews": {
+          "avg_rating": 5.0,
+          "review_count": 10
+        },
+        "variants": [
+          {
+            "id": "47572947403009",
+            "sku": null,
+            "name": "6",
+            "title": "6",
+            "color": [],
+            "price": 2379,
+            "compareAtPrice": 2854,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "ratingBadge": {
+          "backgroundColor": "#F5F5F5",
+          "textColor": "#1F2937",
+          "starColor": "#FF9900",
+          "position": "top-right"
+        },
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      },
+      {
+        "id": "9014561964289",
+        "name": "Coiled Serpent Wrap Ring",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/0613/1400/7297/files/Shopify_1f2d88aa-69d7-42d3-8993-fcd7cd335d5b.jpg?v=1770377254",
+        "product_type": null,
+        "product_category": "demifine",
+        "price": 2169,
+        "originalPrice": 2602,
+        "color": ["Gold"],
+        "discounts": [],
+        "rating": 4.5,
+        "reviews": {
+          "avg_rating": 4.5,
+          "review_count": 133
+        },
+        "variants": [
+          {
+            "id": "47572946419969",
+            "sku": null,
+            "name": "6",
+            "title": "6",
+            "color": [],
+            "price": 2169,
+            "compareAtPrice": 2602,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          },
+          {
+            "id": "47572946452737",
+            "sku": null,
+            "name": "7",
+            "title": "7",
+            "color": [],
+            "price": 2169,
+            "compareAtPrice": 2602,
+            "availableForSale": true,
+            "isSelected": false,
+            "selectedOptions": []
+          }
+        ],
+        "productType": "regular",
+        "delivery": {
+          "text": "",
+          "buttonText": "",
+          "buttonBackgroundColor": "#E86E48",
+          "buttonTextColor": "#FFFFFF",
+          "textColor": "#000000"
+        },
+        "priceStyle": {
+          "currentPriceColor": "#111827",
+          "originalPriceColor": "#9CA3AF",
+          "currencySymbolColor": "#111827"
+        },
+        "titleStyle": {
+          "textColor": "#454545",
+          "fontWeight": "medium"
+        },
+        "cart": {
+          "is_in_cart": false,
+          "quantity": 0
+        },
+        "in_wishlist": false
+      }
+    ],
+    "count": 20,
+    "page_size": 20,
+    "has_next": true,
+    "next_cursor": "eyJsYXN0X2lkIjo5MDE0NTYxOTY0Mjg5LCJsYXN0X3ZhbHVlIjoiMjAyNi0wMS0zMSAxMDo0MzoxMi4wMDAwMDAiLCJvZmZzZXQiOjE5fQ==",
+    "has_previous": false,
+    "previous_cursor": "eyJsYXN0X2lkIjo5MDQzNjY4ODYxMTg1LCJsYXN0X3ZhbHVlIjoiMjAyNi0wMi0yNyAwNjowNToyNi4wMDAwMDAiLCJvZmZzZXQiOjB9",
+    "current_filters": {},
+    "available_filters": {
+      "filters": [
+        {
+          "id": "filter.v.price",
+          "label": "Price",
+          "type": "PRICE_RANGE",
+          "values": [
+            {
+              "id": "filter.v.price",
+              "label": "Price",
+              "count": 0,
+              "input": {
+                "price": {
+                  "min": 0,
+                  "max": 5397.0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "filter.p.product_type",
+          "label": "Product type",
+          "type": "LIST",
+          "values": [
+            {
+              "id": "filter.p.product_type.anklets",
+              "label": "Anklets",
+              "count": 3,
+              "input": {
+                "productType": "Anklets"
+              }
+            },
+            {
+              "id": "filter.p.product_type.bracelets",
+              "label": "Bracelets",
+              "count": 75,
+              "input": {
+                "productType": "Bracelets"
+              }
+            },
+            {
+              "id": "filter.p.product_type.charms",
+              "label": "Charms",
+              "count": 1,
+              "input": {
+                "productType": "Charms"
+              }
+            },
+            {
+              "id": "filter.p.product_type.earrings",
+              "label": "Earrings",
+              "count": 65,
+              "input": {
+                "productType": "Earrings"
+              }
+            },
+            {
+              "id": "filter.p.product_type.hair-ties",
+              "label": "Hair Ties",
+              "count": 4,
+              "input": {
+                "productType": "Hair Ties"
+              }
+            },
+            {
+              "id": "filter.p.product_type.necklaces",
+              "label": "Necklaces",
+              "count": 75,
+              "input": {
+                "productType": "Necklaces"
+              }
+            },
+            {
+              "id": "filter.p.product_type.rings",
+              "label": "Rings",
+              "count": 62,
+              "input": {
+                "productType": "Rings"
+              }
+            }
+          ]
+        },
+        {
+          "id": "filter.v.option.color",
+          "label": "Color",
+          "type": "LIST",
+          "values": [
+            {
+              "id": "filter.v.option.color.gid-shopify-filtersettinggroup-121536769",
+              "label": "Gold",
+              "count": 9,
+              "input": {
+                "variantOption": {
+                  "name": "color",
+                  "value": "121536769"
+                }
+              }
+            },
+            {
+              "id": "filter.v.option.color.gid-shopify-filtersettinggroup-121602305",
+              "label": "Rose Gold",
+              "count": 1,
+              "input": {
+                "variantOption": {
+                  "name": "color",
+                  "value": "121602305"
+                }
+              }
+            },
+            {
+              "id": "filter.v.option.color.gid-shopify-filtersettinggroup-121635073",
+              "label": "Silver",
+              "count": 1,
+              "input": {
+                "variantOption": {
+                  "name": "color",
+                  "value": "121635073"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "filter.p.m.custom.ocassion",
+          "label": "Occasion",
+          "type": "LIST",
+          "values": [
+            {
+              "id": "filter.p.m.custom.ocassion.vacay-mode",
+              "label": "Vacay Mode",
+              "count": 285,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "ocassion",
+                  "value": "Vacay Mode"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "filter.p.m.custom.earrings_design",
+          "label": "STYLE",
+          "type": "LIST",
+          "values": [
+            {
+              "id": "filter.p.m.custom.earrings_design.band",
+              "label": "Band",
+              "count": 12,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Band"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.bangle",
+              "label": "Bangle",
+              "count": 16,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Bangle"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.bead-bracelet",
+              "label": "Bead Bracelet",
+              "count": 2,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Bead Bracelet"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.chain",
+              "label": "Chain",
+              "count": 7,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Chain"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.chain-bracelet",
+              "label": "Chain Bracelet",
+              "count": 21,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Chain Bracelet"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.charm-bracelet",
+              "label": "Charm Bracelet",
+              "count": 9,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Charm Bracelet"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.charm-necklace",
+              "label": "Charm Necklace",
+              "count": 3,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Charm Necklace"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.choker",
+              "label": "Choker",
+              "count": 3,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Choker"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.cuff-bracelet",
+              "label": "Cuff Bracelet",
+              "count": 17,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Cuff Bracelet"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.danglers",
+              "label": "Danglers",
+              "count": 10,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Danglers"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.drop-earrings",
+              "label": "Drop Earrings",
+              "count": 13,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Drop Earrings"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.earring-set",
+              "label": "Earring Set",
+              "count": 3,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Earring Set"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.hand-harness",
+              "label": "Hand Harness",
+              "count": 3,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Hand Harness"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.hoop-earrings",
+              "label": "Hoop Earrings",
+              "count": 24,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Hoop Earrings"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.jacket-earrings",
+              "label": "Jacket Earrings",
+              "count": 1,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Jacket Earrings"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.lariat-necklace",
+              "label": "Lariat Necklace",
+              "count": 4,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Lariat Necklace"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.layered-bracelet",
+              "label": "Layered Bracelet",
+              "count": 2,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Layered Bracelet"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.layered-necklace",
+              "label": "Layered Necklace",
+              "count": 12,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Layered Necklace"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.minimal-ring",
+              "label": "Minimal Ring",
+              "count": 18,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Minimal Ring"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.pearl-ring",
+              "label": "Pearl Ring",
+              "count": 1,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Pearl Ring"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.pendant-necklace",
+              "label": "Pendant Necklace",
+              "count": 38,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Pendant Necklace"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.short-necklace",
+              "label": "Short Necklace",
+              "count": 5,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Short Necklace"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.signet-ring",
+              "label": "Signet Ring",
+              "count": 4,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Signet Ring"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.solitaire-necklace",
+              "label": "Solitaire Necklace",
+              "count": 1,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Solitaire Necklace"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.stack-ring",
+              "label": "Stack Ring",
+              "count": 2,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Stack Ring"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.statement-ring",
+              "label": "Statement Ring",
+              "count": 25,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Statement Ring"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.station-bracelet",
+              "label": "Station Bracelet",
+              "count": 1,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Station Bracelet"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.station-necklace",
+              "label": "Station Necklace",
+              "count": 2,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Station Necklace"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.stretchable-bracelet",
+              "label": "Stretchable Bracelet",
+              "count": 1,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Stretchable Bracelet"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.stud-earrings",
+              "label": "Stud Earrings",
+              "count": 14,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Stud Earrings"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.tennis-bracelet",
+              "label": "Tennis Bracelet",
+              "count": 1,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Tennis Bracelet"
+                }
+              }
+            },
+            {
+              "id": "filter.p.m.custom.earrings_design.wrap-around-bracelet",
+              "label": "Wrap Around Bracelet",
+              "count": 2,
+              "input": {
+                "productMetafield": {
+                  "namespace": "custom",
+                  "key": "earrings_design",
+                  "value": "Wrap Around Bracelet"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "sort_by": null
+  },
+  "timestamp": "2026-06-16T11:27:54.758020+05:30"
+}

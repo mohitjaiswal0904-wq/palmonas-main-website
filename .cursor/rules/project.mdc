@@ -1,0 +1,62 @@
+---
+description: Apply these rules to all files in this Next.js project
+globs: ["src/**/*.ts", "src/**/*.tsx"]
+alwaysApply: true
+---
+
+# Next.js TypeScript project rules
+
+See also: `architecture.mdc` · `external-api.mdc` · `cache-components.mdc`
+
+## Non-negotiable
+- **No Next.js API routes** — no files in `src/app/api/`
+- **SSR pages** import only `@/services/server/*` — never client services or hooks
+- **External API only** — all requests go to `getApiBaseUrl()`, never to this Next.js app
+- Strict TypeScript: no `any`, no `as unknown as X`, no `@ts-ignore` without explanation
+- All `async` functions must handle errors (try/catch or `.catch()`)
+- No `console.log` in committed code — use a logger utility
+- Never access `process.env.*` directly — use `@/lib/env`
+
+## Component rules
+- One component per file
+- No inline styles — Tailwind classes only
+- All interactive elements must have accessible labels (`aria-label`, `aria-labelledby`)
+- Use `forwardRef` for all UI primitives that wrap an HTML element
+- **Button haptics:** do not call `web-haptics` or `navigator.vibrate` in components. `HapticClickTracker` fires only on wishlist / cart / checkout controls. Opt out with `data-haptics-ignore`. Imperative extras import `triggerButtonHaptic` from `@/infrastructure/haptics` only.
+- **Horizontal scroll tracks** (`overflow-x-auto` / `overflow-x-scroll`, snap carousels, pill rows): import `HORIZONTAL_SCROLL_PASS_VERTICAL` from `@/lib/layout/horizontal-scroll` and merge with `cn()` on the scroll container. **Never** use `touch-pan-x` — it blocks vertical page scroll on mobile when the finger starts on the carousel (PW-567). Reference: `CmsSlideCarousel`, `ProductCarousel`, `OfferBadges`.
+
+## Data fetching
+- **Server Components (`app/`)**: `await` from `@/services/server/*.server.ts`
+- **Client Components**: TanStack Query hooks in `@/hooks/*` only
+- Client services (`@/services/*.service.ts`) are for hooks/mutations — not pages
+- Type API responses with interfaces from `@/types`
+- Do not re-add route `loading.tsx` on catalog / cart / PDP / home / search / wishlist — see `cache-components.mdc`
+
+## SEO
+- Use `buildMetadata()` from `@/lib/seo` on every public page
+- Set `noIndex: true` on auth, cart, dashboard, and account pages
+
+## Documentation
+- TSDoc on every **exported** function (required); types/properties when non-obvious
+- TSDoc on **module-private helpers** and **React `useCallback` handlers** in feature modules when they encode business logic
+- Use `@param`, `@returns`, and `@throws` where applicable; one-line imperative summary first
+- Inline comments only on non-obvious logic inside function bodies
+- Skip TSDoc on trivial one-liners and inner closure loops
+- Add a one-line comment above each non-trivial **`useEffect`** describing why it runs
+
+## User-facing copy
+- Feature strings live in `config/<feature>/<feature>.config.json` → export as `<feature>Messages` from `<feature>.config.ts`
+- No hardcoded UI/toast/error strings in hooks, stores, or components (API `err.message` may pass through)
+
+## Theme, fonts, and feature constants
+- **Colors / layout / type sizes / gradients** live in `src/config/theme/<feature>.tokens.ts` (e.g. `product.tokens.ts`). Components read via `<feature>Theme` / `productTheme` — do not hardcode Figma hex or magic layout classes in JSX when a token exists. `@/lib` may map names → tokens; it must import those values from theme — never declare hex, chip counts, or layout px in lib.
+- **Delays, URLs, flags, mock payloads** live in `config/<feature>/<feature>.config.json` — not in components. Route chrome variants (which pages get flat header, back-nav title, which icons) are `routeConfigs` flags in that JSON — not hardcoded path/id Sets in lib or JSX.
+- **Fonts:** import `themeFonts` from `@/config/theme/fonts` (or `@/config/theme`). Pair with Tailwind `font-normal` / `font-medium` / `font-semibold` / `font-bold`. **Do not** call `next/font` in feature components — reuse `themeFonts.sans`.
+- Brand palette: add to `src/config/theme/` first, then CSS variables / Tailwind semantic classes as needed.
+
+## When generating new code
+1. Check if a utility already exists in `@/lib/utils/` or `@/lib/layout/` before creating a new one. Never export a shared helper from a component for another module to import — put it in `@/lib/...`.
+2. Page data: server service → page. Mutations: client service → hook → component
+3. Add `tests/<mirror-path>.test.ts(x)` for every new utility, hook, or component
+4. Export from the nearest `index.ts` barrel file when one exists
+5. Prefer `themeFonts` + feature theme tokens over duplicating font loaders or inline Figma values

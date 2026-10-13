@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Palmonas Main Website
 
-## Getting Started
+Next.js 16 · TypeScript · TanStack Query · Axios · Zustand · Tailwind CSS v4
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** — App Router, Turbopack, React Compiler, Cache Components
+- **TanStack Query** — client data fetching
+- **Axios** — external API client (no Next.js API routes)
+- **Zustand** — UI state
+- **Jest + Testing Library** — unit/component tests
+- **Husky + lint-staged + commitlint** — git hooks
+
+## Architecture
+
+```
+External APIs → services/ → hooks/ → components & app/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Layer | Path | Purpose |
+|---|---|---|
+| Types | `src/types/` | API shapes, Zod DTOs, transforms |
+| Services | `src/services/` | Client-side API calls + error normalisation |
+| Server services | `src/services/server/` | Server Component API calls |
+| Hooks | `src/hooks/` | TanStack Query + utility hooks |
+| Components | `src/components/` | UI, layout, SEO |
+| App | `src/app/` | Routes, metadata, sitemap |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+See `.cursor/rules/architecture.mdc` for full rules.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Getting started
 
-## Learn More
+```bash
+pnpm install
+cp .env.example .env.development   # then fill in values
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm dev          # dev server (Turbopack)
+pnpm build        # production build
+pnpm type-check   # TypeScript
+pnpm lint         # ESLint (0 warnings)
+pnpm test         # Jest (fast, no coverage table)
+pnpm test:coverage # Jest + layer/feature coverage report (WARN below 90%)
+pnpm test:ci      # Jest with coverage (CI)
+pnpm format       # Prettier
+```
 
-## Deploy on Vercel
+## Environment variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_APP_ENV=development
+NEXT_PUBLIC_API_DEV=https://app-backend.palmonas.tech
+NEXT_PUBLIC_API_PROD=https://app-backend.palmonas.tech
+AUTH_SECRET=your-secret
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Breakpoints (mobile-first)
+
+| Prefix | Min width |
+|---|---|
+| default | 0px |
+| `mini-mobile:` | 320px |
+| `mobile:` | 480px |
+| `tab:` | 768px |
+| `laptop:` | 1024px |
+| `desktop:` | 1280px |
+
+## Fonts
+
+- **Sans/display** — system stack (`-apple-system` renders SF Pro on Apple devices)
+- **Serif** — EB Garamond via `next/font`
+- Drop licensed SF Pro `.woff2` files into `public/fonts/` when available

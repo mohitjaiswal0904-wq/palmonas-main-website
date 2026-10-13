@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-sf-pro-display: 'SF Pro Display';
+  --font-eb-garamond: 'EB Garamond';
+  --font-inter: 'Inter';
+  --font-nunito-sans: 'Nunito Sans', sans-serif;
+}
+
+/*
+ * Nunito Sans variable font — loaded from Google Fonts in app/layout.tsx.
+ * Weights 200–1000 via font-weight utilities; matches Figma YTLC axis.
+ *
+ * Note: do NOT add bold/medium/semibold/light/regular to theme.fontFamily —
+ * those names shadow Tailwind's font-weight utilities (font-bold, etc.).
+ */
+body,
+.font-sans,
+.font-display {
+  font-family: var(--font-nunito-sans);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    'wdth' 100,
+    'YTLC' 500;
+}
+
+/*
+ * Nunito Sans is loaded via next/font in src/lib/fonts.ts.
+ * Legacy font-* utilities map to the same family in tailwind.config.ts;
+ * sf-* helpers below set weight when a dedicated face was previously used.
+ */
+@layer utilities {
+  .font-sf-regular {
+    font-weight: 400;
+  }
+
+  .font-sf-medium {
+    font-weight: 500;
+  }
+
+  .font-sf-semibold {
+    font-weight: 600;
+  }
+
+  .font-sf-bold {
+    font-weight: 700;
+  }
+}

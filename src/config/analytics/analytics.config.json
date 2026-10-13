@@ -1,0 +1,2863 @@
+{
+  "defaultCurrency": "INR",
+  "mixpanelDistinctIdStorageKey": "mp_palmonas_distinct_id",
+  "mixpanelDistinctIdCookieDays": 365,
+  "gokwikEvents": {
+    "channel": "gokwik_events",
+    "orderPlaced": "Order_Placed_GK"
+  },
+  "pixelOnlyProviders": ["simprosys"],
+  "lazyInitProviders": ["webengage"],
+  "mixpanelInitDelayMs": 500,
+  "mixpanelSessionReplay": {
+    "recordSessionsPercent": 100,
+    "recordHeatmapData": false
+  },
+  "mixpanelIgnoredEvents": ["page_view", "click", "button_clicked"],
+  "googleAdsConversions": {
+    "purchase": "AW-10856259903/HCLTCODigaMDEL_C1bgo",
+    "add_to_cart": "AW-10856259903/QDEVCObigaMDEL_C1bgo",
+    "begin_checkout": "AW-10856259903/TNnuCOnigaMDEL_C1bgo",
+    "add_payment_info": "AW-10856259903/A3h5CO_igaMDEL_C1bgo",
+    "search": "AW-10856259903/fWkQCOzigaMDEL_C1bgo",
+    "page_view": "AW-10856259903/5h6uCN3igaMDEL_C1bgo",
+    "view_item": "AW-10856259903/xDYiCOPigaMDEL_C1bgo"
+  },
+  "events": {
+    "page_view": {
+      "meta": {
+        "eventName": "PageView",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "page_view"
+      },
+      "googleAds": {
+        "eventName": "page_view"
+      },
+      "pinterest": {
+        "eventName": "pagevisit"
+      },
+      "spotify": {
+        "eventName": "PageView"
+      },
+      "mixpanel": {
+        "eventName": "Page View"
+      },
+      "clarity": {
+        "eventName": "page_view"
+      },
+      "webengage": {
+        "eventName": "Page View"
+      }
+    },
+    "view_item": {
+      "meta": {
+        "eventName": "ViewContent",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "view_item"
+      },
+      "googleAds": {
+        "eventName": "view_item"
+      },
+      "pinterest": {
+        "eventName": "pagevisit"
+      },
+      "spotify": {
+        "eventName": "PageView"
+      },
+      "mixpanel": {
+        "eventName": "Item Detail Page Viewed"
+      },
+      "clarity": {
+        "eventName": "view_item"
+      },
+      "webengage": {
+        "eventName": "View Item"
+      }
+    },
+    "add_to_cart": {
+      "meta": {
+        "eventName": "AddToCart",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "add_to_cart"
+      },
+      "googleAds": {
+        "eventName": "add_to_cart"
+      },
+      "pinterest": {
+        "eventName": "addtocart"
+      },
+      "spotify": {
+        "eventName": "AddToCart"
+      },
+      "mixpanel": {
+        "eventName": "Item Added to Cart"
+      },
+      "clarity": {
+        "eventName": "add_to_cart"
+      },
+      "webengage": {
+        "eventName": "Added To Cart"
+      }
+    },
+    "begin_checkout": {
+      "meta": {
+        "eventName": "InitiateCheckout",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "begin_checkout"
+      },
+      "googleAds": {
+        "eventName": "begin_checkout"
+      },
+      "pinterest": {
+        "eventName": "checkout"
+      },
+      "spotify": {
+        "eventName": "Lead"
+      },
+      "mixpanel": {
+        "eventName": "View Checkout"
+      },
+      "clarity": {
+        "eventName": "begin_checkout"
+      },
+      "webengage": {
+        "eventName": "Checkout Started"
+      }
+    },
+    "purchase": {
+      "meta": {
+        "eventName": "Purchase",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "purchase"
+      },
+      "googleAds": {
+        "eventName": "conversion"
+      },
+      "pinterest": {
+        "eventName": "checkout"
+      },
+      "spotify": {
+        "eventName": "Purchase"
+      },
+      "admitad": {
+        "eventName": "purchase"
+      },
+      "mixpanel": {
+        "eventName": "Purchase Completed"
+      },
+      "clarity": {
+        "eventName": "purchase"
+      },
+      "webengage": {
+        "eventName": "Purchase Complete"
+      }
+    },
+    "search": {
+      "meta": {
+        "eventName": "Search",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "search"
+      },
+      "googleAds": {
+        "eventName": "search"
+      },
+      "pinterest": {
+        "eventName": "search"
+      },
+      "spotify": {
+        "eventName": "PageView"
+      },
+      "mixpanel": {
+        "eventName": "Search"
+      },
+      "clarity": {
+        "eventName": "search"
+      },
+      "webengage": {
+        "eventName": "Search"
+      }
+    },
+    "sign_up": {
+      "meta": {
+        "eventName": "CompleteRegistration",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "sign_up"
+      },
+      "googleAds": {
+        "eventName": "sign_up"
+      },
+      "pinterest": {
+        "eventName": "signup"
+      },
+      "spotify": {
+        "eventName": "Lead"
+      },
+      "admitad": {
+        "eventName": "lead"
+      },
+      "mixpanel": {
+        "eventName": "Sign Up"
+      },
+      "clarity": {
+        "eventName": "sign_up"
+      },
+      "webengage": {
+        "eventName": "Signed Up"
+      }
+    },
+    "login": {
+      "meta": {
+        "eventName": "Lead",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "login"
+      },
+      "googleAds": {
+        "eventName": "login"
+      },
+      "pinterest": {
+        "eventName": "lead"
+      },
+      "spotify": {
+        "eventName": "Lead"
+      },
+      "mixpanel": {
+        "eventName": "Login"
+      },
+      "clarity": {
+        "eventName": "login"
+      },
+      "webengage": {
+        "eventName": "User Login"
+      }
+    },
+    "click": {
+      "meta": {
+        "eventName": "Click",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "click"
+      },
+      "googleAds": {
+        "eventName": "click"
+      },
+      "mixpanel": {
+        "eventName": "Click"
+      },
+      "clarity": {
+        "eventName": "click"
+      },
+      "webengage": {
+        "eventName": "Click"
+      }
+    },
+    "app_opened": {
+      "meta": {
+        "eventName": "AppOpened",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "app_opened"
+      },
+      "googleAds": {
+        "eventName": "app_opened"
+      },
+      "pinterest": {
+        "eventName": "app_opened"
+      },
+      "spotify": {
+        "eventName": "AppOpened"
+      },
+      "mixpanel": {
+        "eventName": "App Opened"
+      },
+      "clarity": {
+        "eventName": "app_opened"
+      },
+      "webengage": {
+        "eventName": "App Opened"
+      }
+    },
+    "open_in_app_clicked": {
+      "meta": {
+        "eventName": "OpenInAppClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "open_in_app_clicked"
+      },
+      "googleAds": {
+        "eventName": "open_in_app_clicked"
+      },
+      "pinterest": {
+        "eventName": "open_in_app_clicked"
+      },
+      "spotify": {
+        "eventName": "OpenInAppClicked"
+      },
+      "mixpanel": {
+        "eventName": "Open In App Clicked"
+      },
+      "clarity": {
+        "eventName": "open_in_app_clicked"
+      },
+      "webengage": {
+        "eventName": "Open In App Clicked"
+      }
+    },
+    "app_backgrounded": {
+      "meta": {
+        "eventName": "AppBackgrounded",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "app_backgrounded"
+      },
+      "googleAds": {
+        "eventName": "app_backgrounded"
+      },
+      "pinterest": {
+        "eventName": "app_backgrounded"
+      },
+      "spotify": {
+        "eventName": "AppBackgrounded"
+      },
+      "mixpanel": {
+        "eventName": "App Backgrounded"
+      },
+      "clarity": {
+        "eventName": "app_backgrounded"
+      },
+      "webengage": {
+        "eventName": "App Backgrounded"
+      }
+    },
+    "user_logged_in": {
+      "meta": {
+        "eventName": "Lead",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "user_logged_in"
+      },
+      "googleAds": {
+        "eventName": "user_logged_in"
+      },
+      "pinterest": {
+        "eventName": "user_logged_in"
+      },
+      "spotify": {
+        "eventName": "UserLoggedIn"
+      },
+      "mixpanel": {
+        "eventName": "User Logged In"
+      },
+      "clarity": {
+        "eventName": "user_logged_in"
+      },
+      "webengage": {
+        "eventName": "User Logged In"
+      }
+    },
+    "user_logged_out": {
+      "meta": {
+        "eventName": "UserLoggedOut",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "user_logged_out"
+      },
+      "googleAds": {
+        "eventName": "user_logged_out"
+      },
+      "pinterest": {
+        "eventName": "user_logged_out"
+      },
+      "spotify": {
+        "eventName": "UserLoggedOut"
+      },
+      "mixpanel": {
+        "eventName": "User Logged Out"
+      },
+      "clarity": {
+        "eventName": "user_logged_out"
+      },
+      "webengage": {
+        "eventName": "User Logged Out"
+      }
+    },
+    "auth_skip": {
+      "meta": {
+        "eventName": "AuthSkip",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "auth_skip"
+      },
+      "googleAds": {
+        "eventName": "auth_skip"
+      },
+      "pinterest": {
+        "eventName": "auth_skip"
+      },
+      "spotify": {
+        "eventName": "AuthSkip"
+      },
+      "mixpanel": {
+        "eventName": "Auth Skip"
+      },
+      "clarity": {
+        "eventName": "auth_skip"
+      },
+      "webengage": {
+        "eventName": "Auth Skip"
+      }
+    },
+    "login_failed": {
+      "meta": {
+        "eventName": "LoginFailed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "login_failed"
+      },
+      "googleAds": {
+        "eventName": "login_failed"
+      },
+      "pinterest": {
+        "eventName": "login_failed"
+      },
+      "spotify": {
+        "eventName": "LoginFailed"
+      },
+      "mixpanel": {
+        "eventName": "Login Failed"
+      },
+      "clarity": {
+        "eventName": "login_failed"
+      },
+      "webengage": {
+        "eventName": "Login Failed"
+      }
+    },
+    "otp_sent": {
+      "meta": {
+        "eventName": "OtpSent",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "otp_sent"
+      },
+      "googleAds": {
+        "eventName": "otp_sent"
+      },
+      "pinterest": {
+        "eventName": "otp_sent"
+      },
+      "spotify": {
+        "eventName": "OtpSent"
+      },
+      "mixpanel": {
+        "eventName": "Otp Sent"
+      },
+      "clarity": {
+        "eventName": "otp_sent"
+      },
+      "webengage": {
+        "eventName": "Otp Sent"
+      }
+    },
+    "guest_login_clicked": {
+      "meta": {
+        "eventName": "GuestLoginClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "guest_login_clicked"
+      },
+      "googleAds": {
+        "eventName": "guest_login_clicked"
+      },
+      "pinterest": {
+        "eventName": "guest_login_clicked"
+      },
+      "spotify": {
+        "eventName": "GuestLoginClicked"
+      },
+      "mixpanel": {
+        "eventName": "Guest Login Clicked"
+      },
+      "clarity": {
+        "eventName": "guest_login_clicked"
+      },
+      "webengage": {
+        "eventName": "Guest Login Clicked"
+      }
+    },
+    "user_signed_up": {
+      "meta": {
+        "eventName": "CompleteRegistration",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "user_signed_up"
+      },
+      "googleAds": {
+        "eventName": "user_signed_up"
+      },
+      "pinterest": {
+        "eventName": "user_signed_up"
+      },
+      "spotify": {
+        "eventName": "UserSignedUp"
+      },
+      "mixpanel": {
+        "eventName": "User Signed Up"
+      },
+      "clarity": {
+        "eventName": "user_signed_up"
+      },
+      "webengage": {
+        "eventName": "User Signed Up"
+      }
+    },
+    "profile_updated": {
+      "meta": {
+        "eventName": "ProfileUpdated",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "profile_updated"
+      },
+      "googleAds": {
+        "eventName": "profile_updated"
+      },
+      "pinterest": {
+        "eventName": "profile_updated"
+      },
+      "spotify": {
+        "eventName": "ProfileUpdated"
+      },
+      "mixpanel": {
+        "eventName": "Profile Updated"
+      },
+      "clarity": {
+        "eventName": "profile_updated"
+      },
+      "webengage": {
+        "eventName": "Profile Updated"
+      }
+    },
+    "screen_viewed": {
+      "meta": {
+        "eventName": "PageView",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "screen_viewed"
+      },
+      "googleAds": {
+        "eventName": "screen_viewed"
+      },
+      "pinterest": {
+        "eventName": "screen_viewed"
+      },
+      "spotify": {
+        "eventName": "ScreenViewed"
+      },
+      "mixpanel": {
+        "eventName": "Screen Viewed"
+      },
+      "clarity": {
+        "eventName": "screen_viewed"
+      },
+      "webengage": {
+        "eventName": "Screen Viewed"
+      }
+    },
+    "hamburger_menu_opened": {
+      "meta": {
+        "eventName": "HamburgerMenuOpened",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "hamburger_menu_opened"
+      },
+      "googleAds": {
+        "eventName": "hamburger_menu_opened"
+      },
+      "pinterest": {
+        "eventName": "hamburger_menu_opened"
+      },
+      "spotify": {
+        "eventName": "HamburgerMenuOpened"
+      },
+      "mixpanel": {
+        "eventName": "Hamburger Menu Opened"
+      },
+      "clarity": {
+        "eventName": "hamburger_menu_opened"
+      },
+      "webengage": {
+        "eventName": "Hamburger Menu Opened"
+      }
+    },
+    "navigation_clicked": {
+      "meta": {
+        "eventName": "NavigationClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "navigation_clicked"
+      },
+      "googleAds": {
+        "eventName": "navigation_clicked"
+      },
+      "pinterest": {
+        "eventName": "navigation_clicked"
+      },
+      "spotify": {
+        "eventName": "NavigationClicked"
+      },
+      "mixpanel": {
+        "eventName": "Navigation Clicked"
+      },
+      "clarity": {
+        "eventName": "navigation_clicked"
+      },
+      "webengage": {
+        "eventName": "Navigation Clicked"
+      }
+    },
+    "tab_switched": {
+      "meta": {
+        "eventName": "TabSwitched",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "tab_switched"
+      },
+      "googleAds": {
+        "eventName": "tab_switched"
+      },
+      "pinterest": {
+        "eventName": "tab_switched"
+      },
+      "spotify": {
+        "eventName": "TabSwitched"
+      },
+      "mixpanel": {
+        "eventName": "Tab Switched"
+      },
+      "clarity": {
+        "eventName": "tab_switched"
+      },
+      "webengage": {
+        "eventName": "Tab Switched"
+      }
+    },
+    "home_viewed": {
+      "meta": {
+        "eventName": "HomeViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "home_viewed"
+      },
+      "googleAds": {
+        "eventName": "home_viewed"
+      },
+      "pinterest": {
+        "eventName": "home_viewed"
+      },
+      "spotify": {
+        "eventName": "HomeViewed"
+      },
+      "mixpanel": {
+        "eventName": "Home Viewed"
+      },
+      "clarity": {
+        "eventName": "home_viewed"
+      },
+      "webengage": {
+        "eventName": "Home Viewed"
+      }
+    },
+    "banner_clicked": {
+      "meta": {
+        "eventName": "BannerClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "banner_clicked"
+      },
+      "googleAds": {
+        "eventName": "banner_clicked"
+      },
+      "pinterest": {
+        "eventName": "banner_clicked"
+      },
+      "spotify": {
+        "eventName": "BannerClicked"
+      },
+      "mixpanel": {
+        "eventName": "Banner Clicked"
+      },
+      "clarity": {
+        "eventName": "banner_clicked"
+      },
+      "webengage": {
+        "eventName": "Banner Clicked"
+      }
+    },
+    "collection_tile_clicked": {
+      "meta": {
+        "eventName": "CollectionTileClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "collection_tile_clicked"
+      },
+      "googleAds": {
+        "eventName": "collection_tile_clicked"
+      },
+      "pinterest": {
+        "eventName": "collection_tile_clicked"
+      },
+      "spotify": {
+        "eventName": "CollectionTileClicked"
+      },
+      "mixpanel": {
+        "eventName": "Collection Tile Clicked"
+      },
+      "clarity": {
+        "eventName": "collection_tile_clicked"
+      },
+      "webengage": {
+        "eventName": "Collection Tile Clicked"
+      }
+    },
+    "view_all_clicked": {
+      "meta": {
+        "eventName": "ViewAllClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "view_all_clicked"
+      },
+      "googleAds": {
+        "eventName": "view_all_clicked"
+      },
+      "pinterest": {
+        "eventName": "view_all_clicked"
+      },
+      "spotify": {
+        "eventName": "ViewAllClicked"
+      },
+      "mixpanel": {
+        "eventName": "View All Clicked"
+      },
+      "clarity": {
+        "eventName": "view_all_clicked"
+      },
+      "webengage": {
+        "eventName": "View All Clicked"
+      }
+    },
+    "section_expanded": {
+      "meta": {
+        "eventName": "SectionExpanded",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "section_expanded"
+      },
+      "googleAds": {
+        "eventName": "section_expanded"
+      },
+      "pinterest": {
+        "eventName": "section_expanded"
+      },
+      "spotify": {
+        "eventName": "SectionExpanded"
+      },
+      "mixpanel": {
+        "eventName": "Section Expanded"
+      },
+      "clarity": {
+        "eventName": "section_expanded"
+      },
+      "webengage": {
+        "eventName": "Section Expanded"
+      }
+    },
+    "search_opened": {
+      "meta": {
+        "eventName": "SearchOpened",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "search_opened"
+      },
+      "googleAds": {
+        "eventName": "search_opened"
+      },
+      "pinterest": {
+        "eventName": "search_opened"
+      },
+      "spotify": {
+        "eventName": "SearchOpened"
+      },
+      "mixpanel": {
+        "eventName": "Search Opened"
+      },
+      "clarity": {
+        "eventName": "search_opened"
+      },
+      "webengage": {
+        "eventName": "Search Opened"
+      }
+    },
+    "search_performed": {
+      "meta": {
+        "eventName": "Search",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "search"
+      },
+      "googleAds": {
+        "eventName": "search"
+      },
+      "pinterest": {
+        "eventName": "search_performed"
+      },
+      "spotify": {
+        "eventName": "SearchPerformed"
+      },
+      "mixpanel": {
+        "eventName": "Searched from Home Page"
+      },
+      "clarity": {
+        "eventName": "search_performed"
+      },
+      "webengage": {
+        "eventName": "Search Performed"
+      }
+    },
+    "search_results_viewed": {
+      "meta": {
+        "eventName": "SearchResultsViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "search"
+      },
+      "googleAds": {
+        "eventName": "search"
+      },
+      "pinterest": {
+        "eventName": "search_results_viewed"
+      },
+      "spotify": {
+        "eventName": "SearchResultsViewed"
+      },
+      "mixpanel": {
+        "eventName": "Search Results Viewed"
+      },
+      "clarity": {
+        "eventName": "search_results_viewed"
+      },
+      "webengage": {
+        "eventName": "Search Results Viewed"
+      }
+    },
+    "search_result_clicked": {
+      "meta": {
+        "eventName": "SearchResultClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "search_result_clicked"
+      },
+      "googleAds": {
+        "eventName": "search_result_clicked"
+      },
+      "pinterest": {
+        "eventName": "search_result_clicked"
+      },
+      "spotify": {
+        "eventName": "SearchResultClicked"
+      },
+      "mixpanel": {
+        "eventName": "Search Result Clicked"
+      },
+      "clarity": {
+        "eventName": "search_result_clicked"
+      },
+      "webengage": {
+        "eventName": "Search Result Clicked"
+      }
+    },
+    "search_suggestion_clicked": {
+      "meta": {
+        "eventName": "SearchSuggestionClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "search_suggestion_clicked"
+      },
+      "googleAds": {
+        "eventName": "search_suggestion_clicked"
+      },
+      "pinterest": {
+        "eventName": "search_suggestion_clicked"
+      },
+      "spotify": {
+        "eventName": "SearchSuggestionClicked"
+      },
+      "mixpanel": {
+        "eventName": "Search Suggestion Clicked"
+      },
+      "clarity": {
+        "eventName": "search_suggestion_clicked"
+      },
+      "webengage": {
+        "eventName": "Search Suggestion Clicked"
+      }
+    },
+    "clear_search_clicked": {
+      "meta": {
+        "eventName": "ClearSearchClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "clear_search_clicked"
+      },
+      "googleAds": {
+        "eventName": "clear_search_clicked"
+      },
+      "pinterest": {
+        "eventName": "clear_search_clicked"
+      },
+      "spotify": {
+        "eventName": "ClearSearchClicked"
+      },
+      "mixpanel": {
+        "eventName": "Clear Search Clicked"
+      },
+      "clarity": {
+        "eventName": "clear_search_clicked"
+      },
+      "webengage": {
+        "eventName": "Clear Search Clicked"
+      }
+    },
+    "plp_viewed": {
+      "meta": {
+        "eventName": "PlpViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "plp_viewed"
+      },
+      "googleAds": {
+        "eventName": "plp_viewed"
+      },
+      "pinterest": {
+        "eventName": "plp_viewed"
+      },
+      "spotify": {
+        "eventName": "PlpViewed"
+      },
+      "mixpanel": {
+        "eventName": "PLP Viewed"
+      },
+      "clarity": {
+        "eventName": "plp_viewed"
+      },
+      "webengage": {
+        "eventName": "PLP Viewed"
+      }
+    },
+    "plp_product_impression": {
+      "meta": {
+        "eventName": "PlpProductImpression",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "plp_product_impression"
+      },
+      "googleAds": {
+        "eventName": "plp_product_impression"
+      },
+      "pinterest": {
+        "eventName": "plp_product_impression"
+      },
+      "spotify": {
+        "eventName": "PlpProductImpression"
+      },
+      "mixpanel": {
+        "eventName": "Plp Product Impression"
+      },
+      "clarity": {
+        "eventName": "plp_product_impression"
+      },
+      "webengage": {
+        "eventName": "Plp Product Impression"
+      }
+    },
+    "plp_product_clicked": {
+      "meta": {
+        "eventName": "PlpProductClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "plp_product_clicked"
+      },
+      "googleAds": {
+        "eventName": "plp_product_clicked"
+      },
+      "pinterest": {
+        "eventName": "plp_product_clicked"
+      },
+      "spotify": {
+        "eventName": "PlpProductClicked"
+      },
+      "mixpanel": {
+        "eventName": "Plp Product Clicked"
+      },
+      "clarity": {
+        "eventName": "plp_product_clicked"
+      },
+      "webengage": {
+        "eventName": "Plp Product Clicked"
+      }
+    },
+    "filter_opened": {
+      "meta": {
+        "eventName": "FilterOpened",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "filter_opened"
+      },
+      "googleAds": {
+        "eventName": "filter_opened"
+      },
+      "pinterest": {
+        "eventName": "filter_opened"
+      },
+      "spotify": {
+        "eventName": "FilterOpened"
+      },
+      "mixpanel": {
+        "eventName": "Filter Opened"
+      },
+      "clarity": {
+        "eventName": "filter_opened"
+      },
+      "webengage": {
+        "eventName": "Filter Opened"
+      }
+    },
+    "filter_applied": {
+      "meta": {
+        "eventName": "FilterApplied",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "filter_applied"
+      },
+      "googleAds": {
+        "eventName": "filter_applied"
+      },
+      "pinterest": {
+        "eventName": "filter_applied"
+      },
+      "spotify": {
+        "eventName": "FilterApplied"
+      },
+      "mixpanel": {
+        "eventName": "Search Filtered"
+      },
+      "clarity": {
+        "eventName": "filter_applied"
+      },
+      "webengage": {
+        "eventName": "Filter Applied"
+      }
+    },
+    "sort_applied": {
+      "meta": {
+        "eventName": "SortApplied",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "sort_applied"
+      },
+      "googleAds": {
+        "eventName": "sort_applied"
+      },
+      "pinterest": {
+        "eventName": "sort_applied"
+      },
+      "spotify": {
+        "eventName": "SortApplied"
+      },
+      "mixpanel": {
+        "eventName": "Sort Applied"
+      },
+      "clarity": {
+        "eventName": "sort_applied"
+      },
+      "webengage": {
+        "eventName": "Sort Applied"
+      }
+    },
+    "category_viewed": {
+      "meta": {
+        "eventName": "CategoryViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "category_viewed"
+      },
+      "googleAds": {
+        "eventName": "category_viewed"
+      },
+      "pinterest": {
+        "eventName": "category_viewed"
+      },
+      "spotify": {
+        "eventName": "CategoryViewed"
+      },
+      "mixpanel": {
+        "eventName": "Category Viewed"
+      },
+      "clarity": {
+        "eventName": "category_viewed"
+      },
+      "webengage": {
+        "eventName": "Category Viewed"
+      }
+    },
+    "pdp_viewed": {
+      "meta": {
+        "eventName": "ViewContent",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "view_item"
+      },
+      "googleAds": {
+        "eventName": "view_item"
+      },
+      "pinterest": {
+        "eventName": "pdp_viewed"
+      },
+      "spotify": {
+        "eventName": "PdpViewed"
+      },
+      "mixpanel": {
+        "eventName": "Item Detail Page Viewed"
+      },
+      "clarity": {
+        "eventName": "pdp_viewed"
+      },
+      "webengage": {
+        "eventName": "PDP Viewed"
+      }
+    },
+    "product_viewed_ecom": {
+      "meta": {
+        "eventName": "ProductViewedEcom",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "product_viewed_ecom"
+      },
+      "googleAds": {
+        "eventName": "product_viewed_ecom"
+      },
+      "pinterest": {
+        "eventName": "product_viewed_ecom"
+      },
+      "spotify": {
+        "eventName": "ProductViewedEcom"
+      },
+      "mixpanel": {
+        "eventName": "Product Viewed Ecom"
+      },
+      "clarity": {
+        "eventName": "product_viewed_ecom"
+      },
+      "webengage": {
+        "eventName": "Product Viewed Ecom"
+      }
+    },
+    "pdp_media_interacted": {
+      "meta": {
+        "eventName": "PdpMediaInteracted",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "pdp_media_interacted"
+      },
+      "googleAds": {
+        "eventName": "pdp_media_interacted"
+      },
+      "pinterest": {
+        "eventName": "pdp_media_interacted"
+      },
+      "spotify": {
+        "eventName": "PdpMediaInteracted"
+      },
+      "mixpanel": {
+        "eventName": "Pdp Media Interacted"
+      },
+      "clarity": {
+        "eventName": "pdp_media_interacted"
+      },
+      "webengage": {
+        "eventName": "Pdp Media Interacted"
+      }
+    },
+    "product_details_expanded": {
+      "meta": {
+        "eventName": "ProductDetailsExpanded",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "product_details_expanded"
+      },
+      "googleAds": {
+        "eventName": "product_details_expanded"
+      },
+      "pinterest": {
+        "eventName": "product_details_expanded"
+      },
+      "spotify": {
+        "eventName": "ProductDetailsExpanded"
+      },
+      "mixpanel": {
+        "eventName": "Product Details Expanded"
+      },
+      "clarity": {
+        "eventName": "product_details_expanded"
+      },
+      "webengage": {
+        "eventName": "Product Details Expanded"
+      }
+    },
+    "size_selected": {
+      "meta": {
+        "eventName": "SizeSelected",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "size_selected"
+      },
+      "googleAds": {
+        "eventName": "size_selected"
+      },
+      "pinterest": {
+        "eventName": "size_selected"
+      },
+      "spotify": {
+        "eventName": "SizeSelected"
+      },
+      "mixpanel": {
+        "eventName": "Size Selected"
+      },
+      "clarity": {
+        "eventName": "size_selected"
+      },
+      "webengage": {
+        "eventName": "Size Selected"
+      }
+    },
+    "add_to_cart_clicked": {
+      "meta": {
+        "eventName": "AddToCart",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "add_to_cart_clicked"
+      },
+      "googleAds": {
+        "eventName": "add_to_cart_clicked"
+      },
+      "pinterest": {
+        "eventName": "add_to_cart_clicked"
+      },
+      "spotify": {
+        "eventName": "AddToCartClicked"
+      },
+      "mixpanel": {
+        "eventName": "Add To Cart Clicked"
+      },
+      "clarity": {
+        "eventName": "add_to_cart_clicked"
+      },
+      "webengage": {
+        "eventName": "Add To Cart Clicked"
+      }
+    },
+    "buy_now_clicked": {
+      "meta": {
+        "eventName": "BuyNowClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "buy_now_clicked"
+      },
+      "googleAds": {
+        "eventName": "buy_now_clicked"
+      },
+      "pinterest": {
+        "eventName": "buy_now_clicked"
+      },
+      "spotify": {
+        "eventName": "BuyNowClicked"
+      },
+      "mixpanel": {
+        "eventName": "Buy Now Clicked"
+      },
+      "clarity": {
+        "eventName": "buy_now_clicked"
+      },
+      "webengage": {
+        "eventName": "Buy Now Clicked"
+      }
+    },
+    "share_clicked": {
+      "meta": {
+        "eventName": "ShareClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "share_clicked"
+      },
+      "googleAds": {
+        "eventName": "share_clicked"
+      },
+      "pinterest": {
+        "eventName": "share_clicked"
+      },
+      "spotify": {
+        "eventName": "ShareClicked"
+      },
+      "mixpanel": {
+        "eventName": "Share Clicked"
+      },
+      "clarity": {
+        "eventName": "share_clicked"
+      },
+      "webengage": {
+        "eventName": "Share Clicked"
+      }
+    },
+    "call_store_clicked": {
+      "meta": {
+        "eventName": "CallStoreClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "call_store_clicked"
+      },
+      "googleAds": {
+        "eventName": "call_store_clicked"
+      },
+      "pinterest": {
+        "eventName": "call_store_clicked"
+      },
+      "spotify": {
+        "eventName": "CallStoreClicked"
+      },
+      "mixpanel": {
+        "eventName": "Call Store Clicked"
+      },
+      "clarity": {
+        "eventName": "call_store_clicked"
+      },
+      "webengage": {
+        "eventName": "Call Store Clicked"
+      }
+    },
+    "visit_store_clicked": {
+      "meta": {
+        "eventName": "VisitStoreClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "visit_store_clicked"
+      },
+      "googleAds": {
+        "eventName": "visit_store_clicked"
+      },
+      "pinterest": {
+        "eventName": "visit_store_clicked"
+      },
+      "spotify": {
+        "eventName": "VisitStoreClicked"
+      },
+      "mixpanel": {
+        "eventName": "Visit Store Clicked"
+      },
+      "clarity": {
+        "eventName": "visit_store_clicked"
+      },
+      "webengage": {
+        "eventName": "Visit Store Clicked"
+      }
+    },
+    "wishlist_toggled": {
+      "meta": {
+        "eventName": "WishlistToggled",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "wishlist_toggled"
+      },
+      "googleAds": {
+        "eventName": "wishlist_toggled"
+      },
+      "pinterest": {
+        "eventName": "wishlist_toggled"
+      },
+      "spotify": {
+        "eventName": "WishlistToggled"
+      },
+      "mixpanel": {
+        "eventName": "Wishlist Toggled"
+      },
+      "clarity": {
+        "eventName": "wishlist_toggled"
+      },
+      "webengage": {
+        "eventName": "Wishlist Toggled"
+      }
+    },
+    "wishlist_viewed": {
+      "meta": {
+        "eventName": "WishlistViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "wishlist_viewed"
+      },
+      "googleAds": {
+        "eventName": "wishlist_viewed"
+      },
+      "pinterest": {
+        "eventName": "wishlist_viewed"
+      },
+      "spotify": {
+        "eventName": "WishlistViewed"
+      },
+      "mixpanel": {
+        "eventName": "Wishlist Viewed"
+      },
+      "clarity": {
+        "eventName": "wishlist_viewed"
+      },
+      "webengage": {
+        "eventName": "Wishlist Viewed"
+      }
+    },
+    "wishlist_item_clicked": {
+      "meta": {
+        "eventName": "WishlistItemClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "wishlist_item_clicked"
+      },
+      "googleAds": {
+        "eventName": "wishlist_item_clicked"
+      },
+      "pinterest": {
+        "eventName": "wishlist_item_clicked"
+      },
+      "spotify": {
+        "eventName": "WishlistItemClicked"
+      },
+      "mixpanel": {
+        "eventName": "Wishlist Item Clicked"
+      },
+      "clarity": {
+        "eventName": "wishlist_item_clicked"
+      },
+      "webengage": {
+        "eventName": "Wishlist Item Clicked"
+      }
+    },
+    "wishlist_added_to_cart": {
+      "meta": {
+        "eventName": "WishlistAddedToCart",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "wishlist_added_to_cart"
+      },
+      "googleAds": {
+        "eventName": "wishlist_added_to_cart"
+      },
+      "pinterest": {
+        "eventName": "wishlist_added_to_cart"
+      },
+      "spotify": {
+        "eventName": "WishlistAddedToCart"
+      },
+      "mixpanel": {
+        "eventName": "Wishlist Added To Cart"
+      },
+      "clarity": {
+        "eventName": "wishlist_added_to_cart"
+      },
+      "webengage": {
+        "eventName": "Wishlist Added To Cart"
+      }
+    },
+    "add_to_wishlist": {
+      "meta": {
+        "eventName": "AddToWishlist",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "add_to_wishlist"
+      },
+      "googleAds": {
+        "eventName": "add_to_wishlist"
+      },
+      "pinterest": {
+        "eventName": "add_to_wishlist"
+      },
+      "spotify": {
+        "eventName": "AddToWishlist"
+      },
+      "mixpanel": {
+        "eventName": "Add To Wishlist"
+      },
+      "clarity": {
+        "eventName": "add_to_wishlist"
+      },
+      "webengage": {
+        "eventName": "Add To Wishlist"
+      }
+    },
+    "remove_from_wishlist": {
+      "meta": {
+        "eventName": "RemoveFromWishlist",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "remove_from_wishlist"
+      },
+      "googleAds": {
+        "eventName": "remove_from_wishlist"
+      },
+      "pinterest": {
+        "eventName": "remove_from_wishlist"
+      },
+      "spotify": {
+        "eventName": "RemoveFromWishlist"
+      },
+      "mixpanel": {
+        "eventName": "Remove From Wishlist"
+      },
+      "clarity": {
+        "eventName": "remove_from_wishlist"
+      },
+      "webengage": {
+        "eventName": "Remove From Wishlist"
+      }
+    },
+    "cart_viewed": {
+      "meta": {
+        "eventName": "CartViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "cart_viewed"
+      },
+      "googleAds": {
+        "eventName": "cart_viewed"
+      },
+      "pinterest": {
+        "eventName": "cart_viewed"
+      },
+      "spotify": {
+        "eventName": "CartViewed"
+      },
+      "mixpanel": {
+        "eventName": "Cart Viewed"
+      },
+      "clarity": {
+        "eventName": "cart_viewed"
+      },
+      "webengage": {
+        "eventName": "Cart Viewed"
+      }
+    },
+    "quantity_changed": {
+      "meta": {
+        "eventName": "QuantityChanged",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "quantity_changed"
+      },
+      "googleAds": {
+        "eventName": "quantity_changed"
+      },
+      "pinterest": {
+        "eventName": "quantity_changed"
+      },
+      "spotify": {
+        "eventName": "QuantityChanged"
+      },
+      "mixpanel": {
+        "eventName": "Quantity Changed"
+      },
+      "clarity": {
+        "eventName": "quantity_changed"
+      },
+      "webengage": {
+        "eventName": "Quantity Changed"
+      }
+    },
+    "cart_item_removed": {
+      "meta": {
+        "eventName": "CartItemRemoved",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "cart_item_removed"
+      },
+      "googleAds": {
+        "eventName": "cart_item_removed"
+      },
+      "pinterest": {
+        "eventName": "cart_item_removed"
+      },
+      "spotify": {
+        "eventName": "CartItemRemoved"
+      },
+      "mixpanel": {
+        "eventName": "Item Removed from Cart"
+      },
+      "clarity": {
+        "eventName": "cart_item_removed"
+      },
+      "webengage": {
+        "eventName": "Cart Item Removed"
+      }
+    },
+    "checkout_started": {
+      "meta": {
+        "eventName": "InitiateCheckout",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "begin_checkout"
+      },
+      "googleAds": {
+        "eventName": "begin_checkout"
+      },
+      "pinterest": {
+        "eventName": "checkout_started"
+      },
+      "spotify": {
+        "eventName": "CheckoutStarted"
+      },
+      "mixpanel": {
+        "eventName": "View Checkout"
+      },
+      "clarity": {
+        "eventName": "checkout_started"
+      },
+      "webengage": {
+        "eventName": "Checkout Started"
+      }
+    },
+    "remove_from_cart": {
+      "meta": {
+        "eventName": "RemoveFromCart",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "remove_from_cart"
+      },
+      "googleAds": {
+        "eventName": "remove_from_cart"
+      },
+      "pinterest": {
+        "eventName": "remove_from_cart"
+      },
+      "spotify": {
+        "eventName": "RemoveFromCart"
+      },
+      "mixpanel": {
+        "eventName": "Item Removed from Cart"
+      },
+      "clarity": {
+        "eventName": "remove_from_cart"
+      },
+      "webengage": {
+        "eventName": "Remove From Cart"
+      }
+    },
+    "apply_coupon_clicked": {
+      "meta": {
+        "eventName": "ApplyCouponClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "apply_coupon_clicked"
+      },
+      "googleAds": {
+        "eventName": "apply_coupon_clicked"
+      },
+      "pinterest": {
+        "eventName": "apply_coupon_clicked"
+      },
+      "spotify": {
+        "eventName": "ApplyCouponClicked"
+      },
+      "mixpanel": {
+        "eventName": "Apply Coupon Clicked"
+      },
+      "clarity": {
+        "eventName": "apply_coupon_clicked"
+      },
+      "webengage": {
+        "eventName": "Apply Coupon Clicked"
+      }
+    },
+    "coupon_removed": {
+      "meta": {
+        "eventName": "CouponRemoved",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "coupon_removed"
+      },
+      "googleAds": {
+        "eventName": "coupon_removed"
+      },
+      "pinterest": {
+        "eventName": "coupon_removed"
+      },
+      "spotify": {
+        "eventName": "CouponRemoved"
+      },
+      "mixpanel": {
+        "eventName": "Coupon Removed"
+      },
+      "clarity": {
+        "eventName": "coupon_removed"
+      },
+      "webengage": {
+        "eventName": "Coupon Removed"
+      }
+    },
+    "checkout_started_ecom": {
+      "meta": {
+        "eventName": "InitiateCheckout",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "begin_checkout"
+      },
+      "googleAds": {
+        "eventName": "begin_checkout"
+      },
+      "pinterest": {
+        "eventName": "checkout_started_ecom"
+      },
+      "spotify": {
+        "eventName": "CheckoutStartedEcom"
+      },
+      "mixpanel": {
+        "eventName": "View Checkout"
+      },
+      "clarity": {
+        "eventName": "checkout_started_ecom"
+      },
+      "webengage": {
+        "eventName": "Checkout Started Ecom"
+      }
+    },
+    "order_completed": {
+      "meta": {
+        "eventName": "Purchase",
+        "standard": true
+      },
+      "ga4": {
+        "eventName": "purchase"
+      },
+      "googleAds": {
+        "eventName": "purchase"
+      },
+      "pinterest": {
+        "eventName": "order_completed"
+      },
+      "spotify": {
+        "eventName": "OrderCompleted"
+      },
+      "mixpanel": {
+        "eventName": "Purchase Completed"
+      },
+      "clarity": {
+        "eventName": "order_completed"
+      },
+      "webengage": {
+        "eventName": "Order Completed"
+      }
+    },
+    "payment_initiated": {
+      "meta": {
+        "eventName": "PaymentInitiated",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "add_payment_info"
+      },
+      "googleAds": {
+        "eventName": "add_payment_info"
+      },
+      "pinterest": {
+        "eventName": "payment_initiated"
+      },
+      "spotify": {
+        "eventName": "PaymentInitiated"
+      },
+      "mixpanel": {
+        "eventName": "Payment Initiated"
+      },
+      "clarity": {
+        "eventName": "payment_initiated"
+      },
+      "webengage": {
+        "eventName": "Payment Initiated"
+      }
+    },
+    "payment_completed": {
+      "meta": {
+        "eventName": "PaymentCompleted",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "payment_completed"
+      },
+      "googleAds": {
+        "eventName": "payment_completed"
+      },
+      "pinterest": {
+        "eventName": "payment_completed"
+      },
+      "spotify": {
+        "eventName": "PaymentCompleted"
+      },
+      "mixpanel": {
+        "eventName": "Payment Completed"
+      },
+      "clarity": {
+        "eventName": "payment_completed"
+      },
+      "webengage": {
+        "eventName": "Payment Completed"
+      }
+    },
+    "payment_failed": {
+      "meta": {
+        "eventName": "PaymentFailed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "payment_failed"
+      },
+      "googleAds": {
+        "eventName": "payment_failed"
+      },
+      "pinterest": {
+        "eventName": "payment_failed"
+      },
+      "spotify": {
+        "eventName": "PaymentFailed"
+      },
+      "mixpanel": {
+        "eventName": "Payment Failed"
+      },
+      "clarity": {
+        "eventName": "payment_failed"
+      },
+      "webengage": {
+        "eventName": "Payment Failed"
+      }
+    },
+    "gold_purchased": {
+      "meta": {
+        "eventName": "GoldPurchased",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "gold_purchased"
+      },
+      "googleAds": {
+        "eventName": "gold_purchased"
+      },
+      "pinterest": {
+        "eventName": "gold_purchased"
+      },
+      "spotify": {
+        "eventName": "GoldPurchased"
+      },
+      "mixpanel": {
+        "eventName": "Gold Purchased"
+      },
+      "clarity": {
+        "eventName": "gold_purchased"
+      },
+      "webengage": {
+        "eventName": "Gold Purchased"
+      }
+    },
+    "gold_sold": {
+      "meta": {
+        "eventName": "GoldSold",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "gold_sold"
+      },
+      "googleAds": {
+        "eventName": "gold_sold"
+      },
+      "pinterest": {
+        "eventName": "gold_sold"
+      },
+      "spotify": {
+        "eventName": "GoldSold"
+      },
+      "mixpanel": {
+        "eventName": "Gold Sold"
+      },
+      "clarity": {
+        "eventName": "gold_sold"
+      },
+      "webengage": {
+        "eventName": "Gold Sold"
+      }
+    },
+    "coupon_applied": {
+      "meta": {
+        "eventName": "CouponApplied",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "coupon_applied"
+      },
+      "googleAds": {
+        "eventName": "coupon_applied"
+      },
+      "pinterest": {
+        "eventName": "coupon_applied"
+      },
+      "spotify": {
+        "eventName": "CouponApplied"
+      },
+      "mixpanel": {
+        "eventName": "Coupon Applied"
+      },
+      "clarity": {
+        "eventName": "coupon_applied"
+      },
+      "webengage": {
+        "eventName": "Coupon Applied"
+      }
+    },
+    "offer_viewed": {
+      "meta": {
+        "eventName": "OfferViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "offer_viewed"
+      },
+      "googleAds": {
+        "eventName": "offer_viewed"
+      },
+      "pinterest": {
+        "eventName": "offer_viewed"
+      },
+      "spotify": {
+        "eventName": "OfferViewed"
+      },
+      "mixpanel": {
+        "eventName": "Offer Viewed"
+      },
+      "clarity": {
+        "eventName": "offer_viewed"
+      },
+      "webengage": {
+        "eventName": "Offer Viewed"
+      }
+    },
+    "address_added": {
+      "meta": {
+        "eventName": "AddressAdded",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "address_added"
+      },
+      "googleAds": {
+        "eventName": "address_added"
+      },
+      "pinterest": {
+        "eventName": "address_added"
+      },
+      "spotify": {
+        "eventName": "AddressAdded"
+      },
+      "mixpanel": {
+        "eventName": "Address Added"
+      },
+      "clarity": {
+        "eventName": "address_added"
+      },
+      "webengage": {
+        "eventName": "Address Added"
+      }
+    },
+    "delivery_slot_selected": {
+      "meta": {
+        "eventName": "DeliverySlotSelected",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "delivery_slot_selected"
+      },
+      "googleAds": {
+        "eventName": "delivery_slot_selected"
+      },
+      "pinterest": {
+        "eventName": "delivery_slot_selected"
+      },
+      "spotify": {
+        "eventName": "DeliverySlotSelected"
+      },
+      "mixpanel": {
+        "eventName": "Delivery Slot Selected"
+      },
+      "clarity": {
+        "eventName": "delivery_slot_selected"
+      },
+      "webengage": {
+        "eventName": "Delivery Slot Selected"
+      }
+    },
+    "orders_list_viewed": {
+      "meta": {
+        "eventName": "OrdersListViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "orders_list_viewed"
+      },
+      "googleAds": {
+        "eventName": "orders_list_viewed"
+      },
+      "pinterest": {
+        "eventName": "orders_list_viewed"
+      },
+      "spotify": {
+        "eventName": "OrdersListViewed"
+      },
+      "mixpanel": {
+        "eventName": "Orders List Viewed"
+      },
+      "clarity": {
+        "eventName": "orders_list_viewed"
+      },
+      "webengage": {
+        "eventName": "Orders List Viewed"
+      }
+    },
+    "order_detail_viewed": {
+      "meta": {
+        "eventName": "OrderDetailViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "order_detail_viewed"
+      },
+      "googleAds": {
+        "eventName": "order_detail_viewed"
+      },
+      "pinterest": {
+        "eventName": "order_detail_viewed"
+      },
+      "spotify": {
+        "eventName": "OrderDetailViewed"
+      },
+      "mixpanel": {
+        "eventName": "Order Detail Viewed"
+      },
+      "clarity": {
+        "eventName": "order_detail_viewed"
+      },
+      "webengage": {
+        "eventName": "Order Detail Viewed"
+      }
+    },
+    "order_tracking_viewed": {
+      "meta": {
+        "eventName": "OrderTrackingViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "order_tracking_viewed"
+      },
+      "googleAds": {
+        "eventName": "order_tracking_viewed"
+      },
+      "pinterest": {
+        "eventName": "order_tracking_viewed"
+      },
+      "spotify": {
+        "eventName": "OrderTrackingViewed"
+      },
+      "mixpanel": {
+        "eventName": "Order Tracking Viewed"
+      },
+      "clarity": {
+        "eventName": "order_tracking_viewed"
+      },
+      "webengage": {
+        "eventName": "Order Tracking Viewed"
+      }
+    },
+    "reorder_clicked": {
+      "meta": {
+        "eventName": "ReorderClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "reorder_clicked"
+      },
+      "googleAds": {
+        "eventName": "reorder_clicked"
+      },
+      "pinterest": {
+        "eventName": "reorder_clicked"
+      },
+      "spotify": {
+        "eventName": "ReorderClicked"
+      },
+      "mixpanel": {
+        "eventName": "Reorder Clicked"
+      },
+      "clarity": {
+        "eventName": "reorder_clicked"
+      },
+      "webengage": {
+        "eventName": "Reorder Clicked"
+      }
+    },
+    "return_clicked": {
+      "meta": {
+        "eventName": "ReturnClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "return_clicked"
+      },
+      "googleAds": {
+        "eventName": "return_clicked"
+      },
+      "pinterest": {
+        "eventName": "return_clicked"
+      },
+      "spotify": {
+        "eventName": "ReturnClicked"
+      },
+      "mixpanel": {
+        "eventName": "Return Clicked"
+      },
+      "clarity": {
+        "eventName": "return_clicked"
+      },
+      "webengage": {
+        "eventName": "Return Clicked"
+      }
+    },
+    "exchange_clicked": {
+      "meta": {
+        "eventName": "ExchangeClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "exchange_clicked"
+      },
+      "googleAds": {
+        "eventName": "exchange_clicked"
+      },
+      "pinterest": {
+        "eventName": "exchange_clicked"
+      },
+      "spotify": {
+        "eventName": "ExchangeClicked"
+      },
+      "mixpanel": {
+        "eventName": "Exchange Clicked"
+      },
+      "clarity": {
+        "eventName": "exchange_clicked"
+      },
+      "webengage": {
+        "eventName": "Exchange Clicked"
+      }
+    },
+    "cancel_order_clicked": {
+      "meta": {
+        "eventName": "CancelOrderClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "cancel_order_clicked"
+      },
+      "googleAds": {
+        "eventName": "cancel_order_clicked"
+      },
+      "pinterest": {
+        "eventName": "cancel_order_clicked"
+      },
+      "spotify": {
+        "eventName": "CancelOrderClicked"
+      },
+      "mixpanel": {
+        "eventName": "Cancel Order Clicked"
+      },
+      "clarity": {
+        "eventName": "cancel_order_clicked"
+      },
+      "webengage": {
+        "eventName": "Cancel Order Clicked"
+      }
+    },
+    "address_list_viewed": {
+      "meta": {
+        "eventName": "AddressListViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "address_list_viewed"
+      },
+      "googleAds": {
+        "eventName": "address_list_viewed"
+      },
+      "pinterest": {
+        "eventName": "address_list_viewed"
+      },
+      "spotify": {
+        "eventName": "AddressListViewed"
+      },
+      "mixpanel": {
+        "eventName": "Address List Viewed"
+      },
+      "clarity": {
+        "eventName": "address_list_viewed"
+      },
+      "webengage": {
+        "eventName": "Address List Viewed"
+      }
+    },
+    "add_address_clicked": {
+      "meta": {
+        "eventName": "AddAddressClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "add_address_clicked"
+      },
+      "googleAds": {
+        "eventName": "add_address_clicked"
+      },
+      "pinterest": {
+        "eventName": "add_address_clicked"
+      },
+      "spotify": {
+        "eventName": "AddAddressClicked"
+      },
+      "mixpanel": {
+        "eventName": "Add Address Clicked"
+      },
+      "clarity": {
+        "eventName": "add_address_clicked"
+      },
+      "webengage": {
+        "eventName": "Add Address Clicked"
+      }
+    },
+    "edit_address_clicked": {
+      "meta": {
+        "eventName": "EditAddressClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "edit_address_clicked"
+      },
+      "googleAds": {
+        "eventName": "edit_address_clicked"
+      },
+      "pinterest": {
+        "eventName": "edit_address_clicked"
+      },
+      "spotify": {
+        "eventName": "EditAddressClicked"
+      },
+      "mixpanel": {
+        "eventName": "Edit Address Clicked"
+      },
+      "clarity": {
+        "eventName": "edit_address_clicked"
+      },
+      "webengage": {
+        "eventName": "Edit Address Clicked"
+      }
+    },
+    "address_deleted": {
+      "meta": {
+        "eventName": "AddressDeleted",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "address_deleted"
+      },
+      "googleAds": {
+        "eventName": "address_deleted"
+      },
+      "pinterest": {
+        "eventName": "address_deleted"
+      },
+      "spotify": {
+        "eventName": "AddressDeleted"
+      },
+      "mixpanel": {
+        "eventName": "Address Deleted"
+      },
+      "clarity": {
+        "eventName": "address_deleted"
+      },
+      "webengage": {
+        "eventName": "Address Deleted"
+      }
+    },
+    "address_set_default": {
+      "meta": {
+        "eventName": "AddressSetDefault",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "address_set_default"
+      },
+      "googleAds": {
+        "eventName": "address_set_default"
+      },
+      "pinterest": {
+        "eventName": "address_set_default"
+      },
+      "spotify": {
+        "eventName": "AddressSetDefault"
+      },
+      "mixpanel": {
+        "eventName": "Address Set Default"
+      },
+      "clarity": {
+        "eventName": "address_set_default"
+      },
+      "webengage": {
+        "eventName": "Address Set Default"
+      }
+    },
+    "wallet_viewed": {
+      "meta": {
+        "eventName": "WalletViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "wallet_viewed"
+      },
+      "googleAds": {
+        "eventName": "wallet_viewed"
+      },
+      "pinterest": {
+        "eventName": "wallet_viewed"
+      },
+      "spotify": {
+        "eventName": "WalletViewed"
+      },
+      "mixpanel": {
+        "eventName": "Wallet Viewed"
+      },
+      "clarity": {
+        "eventName": "wallet_viewed"
+      },
+      "webengage": {
+        "eventName": "Wallet Viewed"
+      }
+    },
+    "add_money_clicked": {
+      "meta": {
+        "eventName": "AddMoneyClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "add_money_clicked"
+      },
+      "googleAds": {
+        "eventName": "add_money_clicked"
+      },
+      "pinterest": {
+        "eventName": "add_money_clicked"
+      },
+      "spotify": {
+        "eventName": "AddMoneyClicked"
+      },
+      "mixpanel": {
+        "eventName": "Add Money Clicked"
+      },
+      "clarity": {
+        "eventName": "add_money_clicked"
+      },
+      "webengage": {
+        "eventName": "Add Money Clicked"
+      }
+    },
+    "transaction_viewed": {
+      "meta": {
+        "eventName": "TransactionViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "transaction_viewed"
+      },
+      "googleAds": {
+        "eventName": "transaction_viewed"
+      },
+      "pinterest": {
+        "eventName": "transaction_viewed"
+      },
+      "spotify": {
+        "eventName": "TransactionViewed"
+      },
+      "mixpanel": {
+        "eventName": "Transaction Viewed"
+      },
+      "clarity": {
+        "eventName": "transaction_viewed"
+      },
+      "webengage": {
+        "eventName": "Transaction Viewed"
+      }
+    },
+    "transaction_clicked": {
+      "meta": {
+        "eventName": "TransactionClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "transaction_clicked"
+      },
+      "googleAds": {
+        "eventName": "transaction_clicked"
+      },
+      "pinterest": {
+        "eventName": "transaction_clicked"
+      },
+      "spotify": {
+        "eventName": "TransactionClicked"
+      },
+      "mixpanel": {
+        "eventName": "Transaction Clicked"
+      },
+      "clarity": {
+        "eventName": "transaction_clicked"
+      },
+      "webengage": {
+        "eventName": "Transaction Clicked"
+      }
+    },
+    "button_clicked": {
+      "meta": {
+        "eventName": "ButtonClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "button_clicked"
+      },
+      "googleAds": {
+        "eventName": "button_clicked"
+      },
+      "pinterest": {
+        "eventName": "button_clicked"
+      },
+      "spotify": {
+        "eventName": "ButtonClicked"
+      },
+      "mixpanel": {
+        "eventName": "Button Clicked"
+      },
+      "clarity": {
+        "eventName": "button_clicked"
+      },
+      "webengage": {
+        "eventName": "Button Clicked"
+      }
+    },
+    "shared": {
+      "meta": {
+        "eventName": "Shared",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "shared"
+      },
+      "googleAds": {
+        "eventName": "shared"
+      },
+      "pinterest": {
+        "eventName": "shared"
+      },
+      "spotify": {
+        "eventName": "Shared"
+      },
+      "mixpanel": {
+        "eventName": "Shared"
+      },
+      "clarity": {
+        "eventName": "shared"
+      },
+      "webengage": {
+        "eventName": "Shared"
+      }
+    },
+    "notification_permission_requested": {
+      "meta": {
+        "eventName": "NotificationPermissionRequested",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "notification_permission_requested"
+      },
+      "googleAds": {
+        "eventName": "notification_permission_requested"
+      },
+      "pinterest": {
+        "eventName": "notification_permission_requested"
+      },
+      "spotify": {
+        "eventName": "NotificationPermissionRequested"
+      },
+      "mixpanel": {
+        "eventName": "Notification Permission Requested"
+      },
+      "clarity": {
+        "eventName": "notification_permission_requested"
+      },
+      "webengage": {
+        "eventName": "Notification Permission Requested"
+      }
+    },
+    "notification_permission_granted": {
+      "meta": {
+        "eventName": "NotificationPermissionGranted",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "notification_permission_granted"
+      },
+      "googleAds": {
+        "eventName": "notification_permission_granted"
+      },
+      "pinterest": {
+        "eventName": "notification_permission_granted"
+      },
+      "spotify": {
+        "eventName": "NotificationPermissionGranted"
+      },
+      "mixpanel": {
+        "eventName": "Notification Permission Granted"
+      },
+      "clarity": {
+        "eventName": "notification_permission_granted"
+      },
+      "webengage": {
+        "eventName": "Notification Permission Granted"
+      }
+    },
+    "notification_clicked": {
+      "meta": {
+        "eventName": "NotificationClicked",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "notification_clicked"
+      },
+      "googleAds": {
+        "eventName": "notification_clicked"
+      },
+      "pinterest": {
+        "eventName": "notification_clicked"
+      },
+      "spotify": {
+        "eventName": "NotificationClicked"
+      },
+      "mixpanel": {
+        "eventName": "Notification Clicked"
+      },
+      "clarity": {
+        "eventName": "notification_clicked"
+      },
+      "webengage": {
+        "eventName": "Notification Clicked"
+      }
+    },
+    "notifications_list_viewed": {
+      "meta": {
+        "eventName": "NotificationsListViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "notifications_list_viewed"
+      },
+      "googleAds": {
+        "eventName": "notifications_list_viewed"
+      },
+      "pinterest": {
+        "eventName": "notifications_list_viewed"
+      },
+      "spotify": {
+        "eventName": "NotificationsListViewed"
+      },
+      "mixpanel": {
+        "eventName": "Notifications List Viewed"
+      },
+      "clarity": {
+        "eventName": "notifications_list_viewed"
+      },
+      "webengage": {
+        "eventName": "Notifications List Viewed"
+      }
+    },
+    "notification_settings_viewed": {
+      "meta": {
+        "eventName": "NotificationSettingsViewed",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "notification_settings_viewed"
+      },
+      "googleAds": {
+        "eventName": "notification_settings_viewed"
+      },
+      "pinterest": {
+        "eventName": "notification_settings_viewed"
+      },
+      "spotify": {
+        "eventName": "NotificationSettingsViewed"
+      },
+      "mixpanel": {
+        "eventName": "Notification Settings Viewed"
+      },
+      "clarity": {
+        "eventName": "notification_settings_viewed"
+      },
+      "webengage": {
+        "eventName": "Notification Settings Viewed"
+      }
+    },
+    "error_occurred": {
+      "meta": {
+        "eventName": "ErrorOccurred",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "error_occurred"
+      },
+      "googleAds": {
+        "eventName": "error_occurred"
+      },
+      "pinterest": {
+        "eventName": "error_occurred"
+      },
+      "spotify": {
+        "eventName": "ErrorOccurred"
+      },
+      "mixpanel": {
+        "eventName": "Error Occurred"
+      },
+      "clarity": {
+        "eventName": "error_occurred"
+      },
+      "webengage": {
+        "eventName": "Error Occurred"
+      }
+    },
+    "api_call": {
+      "meta": {
+        "eventName": "ApiCall",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "api_call"
+      },
+      "googleAds": {
+        "eventName": "api_call"
+      },
+      "pinterest": {
+        "eventName": "api_call"
+      },
+      "spotify": {
+        "eventName": "ApiCall"
+      },
+      "mixpanel": {
+        "eventName": "Api Call"
+      },
+      "clarity": {
+        "eventName": "api_call"
+      },
+      "webengage": {
+        "eventName": "Api Call"
+      }
+    },
+    "carousel_scrolled": {
+      "meta": {
+        "eventName": "CarouselScrolled",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "carousel_scrolled"
+      },
+      "googleAds": {
+        "eventName": "carousel_scrolled"
+      },
+      "pinterest": {
+        "eventName": "carousel_scrolled"
+      },
+      "spotify": {
+        "eventName": "CarouselScrolled"
+      },
+      "mixpanel": {
+        "eventName": "Carousel Scrolled"
+      },
+      "clarity": {
+        "eventName": "carousel_scrolled"
+      },
+      "webengage": {
+        "eventName": "Carousel Scrolled"
+      }
+    },
+    "offers_rail_scrolled": {
+      "meta": {
+        "eventName": "OffersRailScrolled",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "offers_rail_scrolled"
+      },
+      "googleAds": {
+        "eventName": "offers_rail_scrolled"
+      },
+      "pinterest": {
+        "eventName": "offers_rail_scrolled"
+      },
+      "spotify": {
+        "eventName": "OffersRailScrolled"
+      },
+      "mixpanel": {
+        "eventName": "Offers Rail Scrolled"
+      },
+      "clarity": {
+        "eventName": "offers_rail_scrolled"
+      },
+      "webengage": {
+        "eventName": "Offers Rail Scrolled"
+      }
+    },
+    "page_scrolled": {
+      "meta": {
+        "eventName": "PageScrolled",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "page_scrolled"
+      },
+      "googleAds": {
+        "eventName": "page_scrolled"
+      },
+      "pinterest": {
+        "eventName": "page_scrolled"
+      },
+      "spotify": {
+        "eventName": "PageScrolled"
+      },
+      "mixpanel": {
+        "eventName": "Page Scrolled"
+      },
+      "clarity": {
+        "eventName": "page_scrolled"
+      },
+      "webengage": {
+        "eventName": "Page Scrolled"
+      }
+    },
+    "purchased_item": {
+      "meta": {
+        "eventName": "PurchasedItem",
+        "standard": false
+      },
+      "ga4": {
+        "eventName": "purchased_item"
+      },
+      "googleAds": {
+        "eventName": "purchased_item"
+      },
+      "pinterest": {
+        "eventName": "purchased_item"
+      },
+      "spotify": {
+        "eventName": "PurchasedItem"
+      },
+      "mixpanel": {
+        "eventName": "Purchased Item"
+      },
+      "clarity": {
+        "eventName": "purchased_item"
+      },
+      "webengage": {
+        "eventName": "Purchased Item"
+      }
+    }
+  }
+}

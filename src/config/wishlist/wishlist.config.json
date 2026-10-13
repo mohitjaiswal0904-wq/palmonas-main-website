@@ -1,0 +1,34 @@
+{
+  "messages": {
+    "a11y": {
+      "categoryEmpty": "No wishlist items in this category",
+      "exploreAll": "Explore all jewellery",
+      "exploreGold": "Explore our Gold products",
+      "exploreDemifine": "Explore our Demifine products",
+      "outOfStock": "Product is currently out of stock"
+    },
+    "labels": {
+      "exploreAll": "Explore all jewellery",
+      "exploreGold": "Explore our Gold products",
+      "exploreDemifine": "Explore our Demifine products",
+      "outOfStock": "Out of Stock"
+    },
+    "toasts": {
+      "outOfStock": "Product is currently out of stock"
+    }
+  },
+  "categoryExplore": {
+    "all": {
+      "collectionHandle": "best-sellers",
+      "labelKey": "exploreAll"
+    },
+    "gold": {
+      "collectionHandle": "9kt-fine-gold",
+      "labelKey": "exploreGold"
+    },
+    "demifine": {
+      "collectionHandle": "shop-by-category",
+      "labelKey": "exploreDemifine"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "messages": {
+    "labels": {
+      "shopByPrice": "Shop By Price"
+    }
+  },
+  "goldPriceSection": {
+    "sourceTitle": "Gifting",
+    "collectionPathPrefix": "/collections/gold-less-than"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "buttonClickPreset": "medium",
+  "fallbackVibrateMs": 30,
+  "commerceEvents": [
+    "add_to_cart",
+    "add_to_cart_clicked",
+    "buy_now_clicked",
+    "checkout_started",
+    "checkout_started_ecom",
+    "add_to_wishlist",
+    "remove_from_wishlist",
+    "wishlist_toggled",
+    "wishlist_added_to_cart",
+    "remove_from_cart",
+    "quantity_changed"
+  ],
+  "hrefNeedles": ["/cart", "/wishlist", "checkout"],
+  "labelNeedles": [
+    "add to cart",
+    "add to bag",
+    "buy now",
+    "buy it now",
+    "go to cart",
+    "open cart",
+    "checkout",
+    "wishlist",
+    "remove from cart",
+    "move to wishlist",
+    "increase quantity",
+    "decrease quantity",
+    "remove item",
+    "keep item in cart"
+  ]
+}

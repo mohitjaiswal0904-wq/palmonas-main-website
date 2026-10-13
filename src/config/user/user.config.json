@@ -1,0 +1,9 @@
+{
+  "walletCacheMs": 30000,
+  "messages": {
+    "walletLabel": "Palmonas Wallet",
+    "errors": {
+      "fetchWallet": "Failed to fetch wallet balance"
+    }
+  }
+}
