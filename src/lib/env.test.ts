@@ -267,3 +267,38 @@ describe('getAnalyticsMixpanelApiHost', () => {
     expect(getAnalyticsMixpanelApiHost()).toBeUndefined();
   });
 });
+
+describe('UI-test env', () => {
+  const originalEnv = process.env;
+
+  beforeEach(() => {
+    jest.resetModules();
+  });
+
+  afterAll(() => {
+    process.env = originalEnv;
+  });
+
+  it('loads when only the product API is set', async () => {
+    process.env = {
+      NODE_ENV: 'test',
+      NEXT_PUBLIC_API_DEV: 'https://app-backend.palmonas.tech',
+      NEXT_PUBLIC_API_PROD: 'https://api.palmonas.tech',
+    };
+
+    const { getApiBaseUrl, getMtoApiBaseUrl, getKwikpassBaseUrl, getCareersJobScriptUrl } =
+      await import('./env');
+
+    expect(getApiBaseUrl()).toBe('https://app-backend.palmonas.tech');
+    expect(getMtoApiBaseUrl()).toBe('');
+    expect(getKwikpassBaseUrl()).toBe('');
+    expect(getCareersJobScriptUrl()).toBe('');
+  });
+
+  it('uses the public product API when no env is set', async () => {
+    process.env = { NODE_ENV: 'test' };
+
+    const { getApiBaseUrl } = await import('./env');
+    expect(getApiBaseUrl()).toBe('https://app-backend.palmonas.tech');
+  });
+});

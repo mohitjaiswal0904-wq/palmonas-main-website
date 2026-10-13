@@ -3,17 +3,21 @@ import { z } from 'zod';
 const kwikpassEnvSchema = z.enum(['sandbox', 'production']);
 const webengageDataCenterSchema = z.enum(['in', 'us', 'ksa', 'eug']);
 
+/** Empty is allowed. A non-empty value must still be an absolute URL. */
+const optionalUrl = z.union([z.string().url(), z.literal('')]).default('');
+
 const envSchema = z.object({
-  NEXT_PUBLIC_APP_URL: z.string().url(),
-  NEXT_PUBLIC_APP_ENV: z.enum(['development', 'staging', 'production']),
-  NEXT_PUBLIC_API_DEV: z.string().url(),
-  NEXT_PUBLIC_API_PROD: z.string().url(),
-  NEXT_PUBLIC_MTO_API_BASE: z.string().url(),
-  NEXT_PUBLIC_KWIKPASS_MERCHANT_ID: z.string().min(1),
-  NEXT_PUBLIC_KWIKPASS_ENVIRONMENT: kwikpassEnvSchema,
-  NEXT_PUBLIC_KP_BASE: z.string().url(),
-  NEXT_PUBLIC_KWIKPASS_SHOP_DOMAIN: z.string().min(1),
-  NEXT_PUBLIC_OMS_API_URL: z.string().url(),
+  NEXT_PUBLIC_APP_URL: z.string().url().default('http://localhost:3000'),
+  NEXT_PUBLIC_APP_ENV: z.enum(['development', 'staging', 'production']).default('development'),
+  NEXT_PUBLIC_API_DEV: z.string().url().default('https://app-backend.palmonas.tech'),
+  NEXT_PUBLIC_API_PROD: z.string().url().default('https://app-backend.palmonas.tech'),
+  // ponytail: UI-test deploys only need the product API. Checkout, login, careers, and store URLs stay blank until set.
+  NEXT_PUBLIC_MTO_API_BASE: optionalUrl,
+  NEXT_PUBLIC_KWIKPASS_MERCHANT_ID: z.string().default(''),
+  NEXT_PUBLIC_KWIKPASS_ENVIRONMENT: kwikpassEnvSchema.default('sandbox'),
+  NEXT_PUBLIC_KP_BASE: optionalUrl,
+  NEXT_PUBLIC_KWIKPASS_SHOP_DOMAIN: z.string().default('palmonas.myshopify.com'),
+  NEXT_PUBLIC_OMS_API_URL: optionalUrl,
   NEXT_PUBLIC_GOKWIK_STORE_ID: z.string().default(''),
   NEXT_PUBLIC_GOKWIK_FB_PIXEL: z.string().default(''),
   NEXT_PUBLIC_ANALYTICS_META_PIXEL_ID: z.string().default(''),
@@ -29,8 +33,8 @@ const envSchema = z.object({
   NEXT_PUBLIC_ANALYTICS_CLARITY_PROJECT_ID: z.string().default(''),
   NEXT_PUBLIC_ANALYTICS_WEBENGAGE_LICENSE_CODE: z.string().default(''),
   NEXT_PUBLIC_ANALYTICS_WEBENGAGE_DATA_CENTER: webengageDataCenterSchema.default('in'),
-  NEXT_PUBLIC_CAREERS_GENERAL_SCRIPT_URL: z.string().url(),
-  NEXT_PUBLIC_CAREERS_JOB_SCRIPT_URL: z.string().url(),
+  NEXT_PUBLIC_CAREERS_GENERAL_SCRIPT_URL: optionalUrl,
+  NEXT_PUBLIC_CAREERS_JOB_SCRIPT_URL: optionalUrl,
 });
 
 function readKwikpassMerchantId(): string | undefined {
@@ -53,7 +57,7 @@ function parseEnv() {
     NEXT_PUBLIC_API_PROD: process.env.NEXT_PUBLIC_API_PROD,
     NEXT_PUBLIC_MTO_API_BASE: process.env.NEXT_PUBLIC_MTO_API_BASE,
     NEXT_PUBLIC_KWIKPASS_MERCHANT_ID: readKwikpassMerchantId(),
-    NEXT_PUBLIC_KWIKPASS_ENVIRONMENT: readKwikpassEnvironment(),
+    NEXT_PUBLIC_KWIKPASS_ENVIRONMENT: readKwikpassEnvironment() || undefined,
     NEXT_PUBLIC_KP_BASE: readKwikpassBase(),
     NEXT_PUBLIC_KWIKPASS_SHOP_DOMAIN:
       process.env.NEXT_PUBLIC_KWIKPASS_SHOP_DOMAIN ?? 'palmonas.myshopify.com',
