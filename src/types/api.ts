@@ -1,17 +1,16 @@
-/** Generic envelope returned by every Palmonas backend endpoint. */
 export interface ApiResponse<T> {
-  status: number;
-  message: string;
   data: T;
-  timestamp: string;
+  message?: string;
 }
 
-/** Cursor-based pagination metadata included on list responses. */
-export interface PaginationMeta {
-  count: number;
-  page_size: number;
-  has_next: boolean;
-  next_cursor: string | null;
-  has_previous: boolean;
-  previous_cursor: string | null;
+export interface PaginatedResponse<T> {
+  items: T[];
+  total: number;
+  page: number;
+  totalPages: number;
+}
+
+export interface ApiErrorResponse {
+  message: string;
+  code?: string;
 }

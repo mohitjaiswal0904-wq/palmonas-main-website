@@ -1,0 +1,37 @@
+/*
+ * Mobile-first breakpoints (min-width):
+ *   default     0px+        — design for smallest screens first
+ *   mini-mobile 320px+
+ *   mobile      480px+
+ *   tab         768px+
+ *   laptop      1024px+
+ *   desktop     1280px+
+ *
+ * Example: text-sm mobile:text-base tab:text-lg laptop:text-xl
+ *
+ * Font: Nunito Sans (next/font/google — see src/lib/fonts.ts)
+ */
+@import 'tailwindcss';
+@config '../../tailwind.config.ts';
+
+body {
+  @apply font-sans text-base antialiased;
+}
+
+.blog-article-body .web_b {
+  @apply block;
+}
+
+.blog-article-body .mob_b {
+  @apply hidden;
+}
+
+@media (max-width: 600px) {
+  .blog-article-body .web_b {
+    @apply hidden;
+  }
+
+  .blog-article-body .mob_b {
+    @apply block;
+  }
+}

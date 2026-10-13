@@ -1,0 +1,93 @@
+{
+  "features": {
+    "referAndEarn": {
+      "enabled": false,
+      "panelId": "refer-and-earn",
+      "source": "https://palmonas.com/pages/referral-page",
+      "note": "Live referral page has no public program copy; keep off until official UI/copy exists."
+    },
+    "support": {
+      "enabled": true,
+      "panelId": "support",
+      "source": "https://support.palmonas.com/"
+    },
+    "howToEarn": {
+      "enabled": true,
+      "panelId": "how-to-earn",
+      "source": "https://palmonas.com/pages/palmonas-rewards-policy"
+    },
+    "howToRedeem": {
+      "enabled": true,
+      "panelId": "how-to-redeem",
+      "source": "https://support.palmonas.com/; https://palmonas.com/pages/palmonas-rewards-policy"
+    },
+    "faqs": {
+      "enabled": true,
+      "panelId": "faqs",
+      "source": "https://palmonas.com/pages/faqs"
+    },
+    "privacyPolicy": {
+      "enabled": true,
+      "panelId": "privacy-policy",
+      "source": "https://palmonas.com/pages/privacy-policy"
+    }
+  },
+  "messages": {
+    "a11y": {
+      "copyReferralCode": "Copy referral code",
+      "openSupportTicket": "Open Palmonas support ticket page",
+      "callSupport": "Call Palmonas support",
+      "backFromHub": "Go back"
+    },
+    "labels": {
+      "hubTitle": "Account"
+    },
+    "toasts": {
+      "referralCopied": "Referral code copied",
+      "referralCopyFailed": "Could not copy referral code"
+    },
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "phoneInvalid": "Enter a valid 10 digit phone number"
+    },
+    "disabled": {
+      "title": "Unavailable",
+      "description": "This section is not available yet."
+    },
+    "referAndEarn": {
+      "title": "Refer & Earn",
+      "subtitle": "Palmonas Exclusive Rewards | Referral Program",
+      "codeLabel": "Your referral code",
+      "copyLabel": "Copy code",
+      "emptyCode": "No referral code available.",
+      "externalCta": "Open Referral Page",
+      "externalUrl": "https://palmonas.com/pages/referral-page"
+    },
+    "howToEarn": {
+      "menuTitle": "How To Earn"
+    },
+    "howToRedeem": {
+      "menuTitle": "How To Redeem"
+    },
+    "orderHistory": {
+      "getInvoice": "Get Invoice",
+      "getInvoiceLoading": "Generating invoice…",
+      "getInvoiceError": "Could not load invoice. Please try again.",
+      "invoice": {
+        "brandName": "PALMONAS",
+        "tagline": "Everyday Demifine® jewellery",
+        "documentTitle": "Tax Invoice",
+        "websiteUrl": "https://palmonas.com",
+        "supportEmail": "support@palmonas.com",
+        "footerNote": "Thank you for shopping with Palmonas."
+      },
+      "a11y": {
+        "getInvoice": "Get invoice for this order",
+        "viewProduct": "View {name}"
+      }
+    }
+  },
+  "supportTicketUrl": "https://support.palmonas.com/support",
+  "supportHomeUrl": "https://support.palmonas.com/"
+}

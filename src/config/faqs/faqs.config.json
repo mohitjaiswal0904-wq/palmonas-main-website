@@ -1,0 +1,174 @@
+{
+  "messages": {
+    "pageTitle": "POP Plan",
+    "pageSubtitle": "Plan of Purchase - Frequently Asked Questions",
+    "metaTitle": "POP Plan FAQs",
+    "metaDescription": "Frequently asked questions and terms for the Palmonas Plan of Purchase (P-POP) savings plan.",
+    "backLabel": "POP",
+    "backAriaLabel": "Back to POP savings plan",
+    "termsTitle": "T&C"
+  },
+  "sections": [
+    {
+      "id": "generic",
+      "title": "Generic",
+      "items": [
+        {
+          "question": "What is the minimum amount I need to pay every month?",
+          "answer": "You can start your Plan of Purchase with a minimum amount of ₹1,000 per month. Amount must be selected in multiples of ₹1,000."
+        },
+        {
+          "question": "Is there any maximum limit for P-POP?",
+          "answer": "There is no fixed upper limit on enrolment. PAN card is mandatory if monthly instalments are ₹19,000 or above, or if the accumulated amount exceeds ₹1,50,000."
+        },
+        {
+          "question": "Is P-POP applicable on all products?",
+          "answer": "The scheme amount can be redeemed against the purchase of jewellery from Palmonas. Benefits apply only up to the amount accumulated under the scheme."
+        },
+        {
+          "question": "Can I open more than one P-POP plan?",
+          "answer": "Yes, you can open multiple P-POP plans. Two different POP accounts can be clubbed if both are under the same customer ID, with the benefit of one account extended at redemption."
+        },
+        {
+          "question": "Can I cancel my P-POP plan anytime?",
+          "answer": "You may cancel during the tenure; however, deposited instalments can only be redeemed against jewellery purchases. On partial completion, no additional benefit or discount is provided and no cash refund is issued."
+        },
+        {
+          "question": "Can I change my monthly amount after starting the plan?",
+          "answer": "The enrolment amount is fixed when you join the plan and cannot be changed for that plan. You may start a separate plan with a different amount."
+        },
+        {
+          "question": "Can I pay the instalment in store every month?",
+          "answer": "Yes, you can enrol and pay instalments in store or online, as per the enrolment method you choose at signup."
+        },
+        {
+          "question": "Who is eligible to enrol?",
+          "answer": "Only individuals above 18 years of age are eligible. Companies, partnership firms, proprietorship concerns, trusts, HUFs, NRIs, international users, and minors are not eligible."
+        },
+        {
+          "question": "Can the plan be transferred to another person?",
+          "answer": "No. The plan is tied to the enrolling customer and cannot be transferred to another person."
+        }
+      ]
+    },
+    {
+      "id": "enrolment",
+      "title": "Enrolment",
+      "items": [
+        {
+          "question": "How do I enroll in the Plan of Purchase?",
+          "answer": "Visit the POP page on Palmonas, choose your monthly instalment amount, complete your personal details, and pay your first instalment to enrol."
+        },
+        {
+          "question": "When does my plan start?",
+          "answer": "The date on which your first monthly instalment is paid is considered the enrolment date. Subsequent due dates fall on the same calendar date each month."
+        },
+        {
+          "question": "How many payments do I need to make?",
+          "answer": "The scheme tenure is 5 months. You need to make 5 monthly instalment payments to complete the plan."
+        },
+        {
+          "question": "Can I stop the plan after a few months?",
+          "answer": "Pre-maturity requests are not accepted except in medical emergencies with supporting documents submitted within 24 hours for company approval. Cancelling early forfeits the additional one-month benefit."
+        },
+        {
+          "question": "Can I start multiple plans with different amounts?",
+          "answer": "Yes, you can start multiple plans with different monthly amounts under the same customer account."
+        },
+        {
+          "question": "When is my monthly payment due?",
+          "answer": "Your payment is due on the same date each month as your enrolment date. A delay of more than 4 days from the due date is considered a material breach."
+        }
+      ]
+    },
+    {
+      "id": "redemption",
+      "title": "Redemption",
+      "items": [
+        {
+          "question": "When can I redeem my P-POP amount?",
+          "answer": "You can redeem after completing the 5-month tenure, within the 60-day redemption window that begins when the term ends."
+        },
+        {
+          "question": "What is the redemption window?",
+          "answer": "Redemption must be completed within 60 days of completion of the 5-month term period."
+        },
+        {
+          "question": "What happens if I do not redeem within the redemption window?",
+          "answer": "If you do not redeem within 60 days, the company will issue a credit voucher or gift card for the maturity amount, available for redemption."
+        },
+        {
+          "question": "Can I redeem before completing all payments?",
+          "answer": "No. Pre-maturity redemption is not permitted except in approved medical emergencies."
+        },
+        {
+          "question": "Can I redeem partially?",
+          "answer": "Scheme benefits apply only up to the amount accumulated. Partial redemption against a lower purchase value is subject to the accumulated balance."
+        },
+        {
+          "question": "Can I buy jewellery worth more than my P-POP amount?",
+          "answer": "Yes. If your purchase exceeds the eligible scheme amount, the excess value is charged separately with no additional scheme benefits on the excess."
+        },
+        {
+          "question": "Can I redeem online and in store?",
+          "answer": "Yes, you can redeem your P-POP amount both online and at Palmonas stores."
+        },
+        {
+          "question": "Can I use offers along with P-POP redemption?",
+          "answer": "Yes. This scheme can be clubbed with other ongoing offers, promotions, or discounts during the redemption period."
+        },
+        {
+          "question": "Can I redeem multiple plans together?",
+          "answer": "Two different POP accounts under the same customer ID can be clubbed at redemption, with the benefit of one account extended."
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "title": "Policy",
+      "items": [
+        {
+          "question": "What happens if the product is returned after purchase?",
+          "answer": "Returns are handled as per Palmonas return policy. The redeemed scheme value is subject to the same return and exchange terms as the purchased product."
+        },
+        {
+          "question": "Is P-POP refundable to bank account?",
+          "answer": "No. Deposited instalments cannot be refunded by cheque, cash, or online transfer. They can only be redeemed against jewellery purchases."
+        }
+      ]
+    }
+  ],
+  "terms": [
+    "1. The scheme tenure is 5 months, with a minimum enrolment amount per month of ₹1,000.",
+    "2. The enrolment amount must be in multiples of ₹1,000.",
+    "3. The date on which the first monthly instalment is paid by the customer shall be considered as enrolment date. For the purpose of this Scheme, the due date shall be the same date as the Enrolment Date for the subsequent months.",
+    "4. The scheme shall end at the completion of 5 months from the date of first instalment",
+    "5. An amount equivalent to one month’s instalment shall be provided to the customer on behalf of the company as an additional benefit at the time of redemption.",
+    "6. The additional one month’s instalment paid by the company is a non-cash promotional item and cannot be claimed as a cash component at any period.",
+    "7. The redemption must be completed within 60 days of completion of 5 months term period.",
+    "8. In case the customer fails to redeem the maturity amount within scope of 60 days, the company shall share a credit voucher/ gift card to the customer and the same shall be available for redemption.",
+    "9. This scheme can be clubbed with any other ongoing offers, promotions, or discounts which are running in the redemption period.",
+    "10. The item purchased in lieu of the scheme cannot be exchanged for cash.",
+    "11. Two different POP (Plan of Purchase) accounts can be clubbed [subject to both accounts being in the same customer ID] but the benefit of one account can be extended at the time of redemption.",
+    "12. NACH is not possible for this scheme.",
+    "13. Additional benefit at the time of Redemption is subject to availability.",
+    "14. Scheme benefits shall be applicable only up to the amount accumulated under the scheme. If the customer purchases jewellery exceeding the eligible scheme amount, the excess value shall be charged. No additional scheme benefits or offers shall be applicable on the excess value.",
+    "15. Payment of instalments after due dates will be considered as a default, for that month and the eligible discount would be reduced proportionately.",
+    "16. Any Pre-Maturity requests shall not be accepted, other than medical emergencies subject to documents being submitted with a time frame of 24 hours for the company to approve.",
+    "17. The discretion to approve is with the company,",
+    "18. In case of missed payments of instalments or if the customer fails to make payments on agreed terms every month, the customer shall not be eligible for the additional instalment.",
+    "19. The customer shall make payment on the agreed date every month, and a delay of more than 4 days from the due date shall be considered as a material breach.",
+    "20. Any kind of material breach shall make the customer ineligible for this scheme.",
+    "21. The company has the right to change the terms and conditions as per its discretion and shall be intimated to the customer through mail and shall be updated on the website.",
+    "22. Any conditions that are not explicitly covered above would be at the discretion of the Company at the time of transaction/redemption. The decision of the Company in this regard would be deemed irrevocable and final. Disputes, if any, shall be resolved in the courts of Pune jurisdiction only.",
+    "23. In case of non-cash payment mode, there is no restriction on accumulated amount provided the customer submits the PAN card if accumulation exceeds ₹1,50,000/-. For monthly instalments amounting to ₹19,000/- or above, PAN Card of the Customer shall be collected as mandatory KYC Proof.",
+    "24. Only Individuals above the age of 18 can enrol for the Scheme. The Company reserves the right to obtain proof for the same from a customer.",
+    "25. Entities such as companies, partnership firms or proprietorship concerns or trusts or Hindu Undivided Family (HUF) or NRIs, international users and minors (under the age of 18 years) are not eligible to enrol under the Scheme.",
+    "26. The Customer may cancel the Scheme during the tenure of the Scheme; however, the amount of monthly instalment deposited by the Customer can be redeemed only against the purchase of jewellery. In the event of partial completion of the scheme, no benefit/discount will be provided by the Company. The Customer shall not be refunded money by way of Cheque/Cash/online transfer.",
+    "27. The Company reserves the right to alter, amend, add, or delete part or whole of the terms of the Scheme without prior notice to the customer, if the same is not detrimental to the interests of the customer.",
+    "28. The liability of the Company or its franchisee(s) under the Scheme is limited to the extent of instalments paid by the Customer(s) and the accrued discount amount, as per Scheme and the Terms & Conditions contained herein.",
+    "29. The Terms & Conditions listed herein do not in any way indicate any assurance or warranty whatsoever by the Company.",
+    "30. The Customer must maintain correct and updated contact details and payment details with the company once enrolled. The company will not be liable for any loss to the Customer as a result of incorrect or out-of-date information provided to the Company.",
+    "31. The Customer shall not have recourse to any damages, costs, or interest."
+  ]
+}

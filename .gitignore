@@ -23,7 +23,8 @@
 # misc
 .DS_Store
 *.pem
-*-preview-*.png
+pr-description-checkout.md
+pr-description-checkout-fallback.md
 
 # debug
 npm-debug.log*

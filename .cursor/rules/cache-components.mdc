@@ -1,0 +1,30 @@
+---
+description: Cache Components — do not re-add loading.tsx or cookie-bound public SSR
+globs: ["src/app/**", "src/services/server/**", "src/components/layout/StreamingPageShell.tsx", "src/components/cms/HomeCmsPage.tsx", "src/components/cart/CartPageContent.tsx", "src/providers/navigation/**"]
+alwaysApply: true
+---
+
+# Cache Components (do not undo)
+
+`next.config.ts` has `cacheComponents: true`. Soft-nav and iOS/Android swipe-back hang if these are reverted.
+
+## Never re-add `src/app/**/loading.tsx` on
+
+`collections/[handle]`, `emily-in-paris`, `shraddhas-favourite` (+ `/pages/` aliases), `cart`, `products/[handle]`, `(marketing)` home, `search`, `wishlist`.
+
+That file wraps the whole segment. Next then sticks the skeleton after soft-nav and replaces the Activity-preserved page on gesture-back. `StreamingPageShell` / page `<Suspense>` already owns the fallback.
+
+## Public catalog + CMS SSR
+
+`collection.service.server` and `cms-page.service.server` (and their `generateMetadata`) use `createPublicServerApi()` only. Do not call `createServerApi()` / `cookies()` there.
+
+## Page Suspense, not layout Suspense
+
+Uncached `fetch` / `searchParams` must sit inside a **page-level** `<Suspense>`. A layout `StreamingPageShell` is too high (`blocking-prerender-dynamic` on `/`). Keep `HomeCmsPage` → `<Suspense fallback={<HomePageSkeleton />}>` around `HomeCmsMain`.
+
+## Do not revert
+
+- `export const prefetch = 'partial'` on listing / PDP / cart / home / search
+- `StreamingPageShell` main = `StableMainSuspense` (not raw `<Suspense>`)
+- `CartPageContent` must not gate the skeleton on `useAuth().isLoading`
+- `NavigationPendingProvider` clears on `popstate` + persisted `pageshow`; pathname arrival is enough (cart UTMs must not hold the overlay)

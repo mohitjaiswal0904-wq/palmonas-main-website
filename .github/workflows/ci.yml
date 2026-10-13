@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  quality:
+    name: Lint, test, and build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: pnpm type-check
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test:ci
+
+      - name: Build
+        run: pnpm build
+        env:
+          NEXT_PUBLIC_APP_URL: http://localhost:3000
+          NEXT_PUBLIC_APP_ENV: production
+          NEXT_PUBLIC_API_DEV: http://localhost:4000
+          NEXT_PUBLIC_API_PROD: https://api.palmonas.tech
+          NEXT_PUBLIC_MTO_API_BASE: https://utils.palmonas.com
+          NEXT_PUBLIC_KWIKPASS_MERCHANT_ID: ci-test-mid
+          NEXT_PUBLIC_KWIKPASS_ENVIRONMENT: production
+          NEXT_PUBLIC_KP_BASE: https://pdp.gokwik.co
+          NEXT_PUBLIC_KWIKPASS_SHOP_DOMAIN: palmonas.myshopify.com
+          NEXT_PUBLIC_OMS_API_URL: https://omsapi.palmonas.tech
+          NEXT_PUBLIC_GOKWIK_STORE_ID: ''
+          NEXT_PUBLIC_GOKWIK_FB_PIXEL: ''
+          NEXT_PUBLIC_ANALYTICS_META_PIXEL_ID: ''
+          NEXT_PUBLIC_ANALYTICS_GA4_MEASUREMENT_ID: ''
+          NEXT_PUBLIC_ANALYTICS_GOOGLE_ADS_CONVERSION_ID: ''
+          NEXT_PUBLIC_ANALYTICS_GOOGLE_ADS_PURCHASE_SEND_TO: ''
+          NEXT_PUBLIC_ANALYTICS_SIMPROSYS_GTM_CONTAINER_ID: ''
+          NEXT_PUBLIC_ANALYTICS_PINTEREST_TAG_ID: ''
+          NEXT_PUBLIC_ANALYTICS_SPOTIFY_PIXEL_ID: ''
+          NEXT_PUBLIC_ANALYTICS_ADMITAD_CAMPAIGN_CODE: ''
+          NEXT_PUBLIC_ANALYTICS_MIXPANEL_TOKEN: ''
+          NEXT_PUBLIC_ANALYTICS_MIXPANEL_API_HOST: ''
+          NEXT_PUBLIC_ANALYTICS_CLARITY_PROJECT_ID: ''
+          NEXT_PUBLIC_ANALYTICS_WEBENGAGE_LICENSE_CODE: ''
+          NEXT_PUBLIC_ANALYTICS_WEBENGAGE_DATA_CENTER: in
+          NEXT_PUBLIC_CAREERS_GENERAL_SCRIPT_URL: https://script.google.com/macros/s/AKfycbw3IIdgklSPyQC4GhJgpZE4tbk740XfomGNREWCr-fH-2CYMGxJ8lHCnAsRigSfhBIP/exec
+          NEXT_PUBLIC_CAREERS_JOB_SCRIPT_URL: https://script.google.com/macros/s/AKfycbyrnLxbijXIgW5P9gwB_hX-1bsHhV5wbTpqrsRgzjQmV02Jn9khDZuQESC6oeVpGhwF/exec

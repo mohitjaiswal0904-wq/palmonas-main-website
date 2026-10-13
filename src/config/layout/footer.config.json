@@ -1,0 +1,23 @@
+{
+  "messages": {
+    "labels": {
+      "emailLabel": "Email address"
+    },
+    "toasts": {
+      "success": "Thanks for subscribing!",
+      "error": "Could not subscribe. Please try again.",
+      "unavailable": "Subscription is temporarily unavailable. Please try again later."
+    },
+    "validation": {
+      "emailInvalid": "Enter a valid email address"
+    },
+    "a11y": {
+      "submitting": "Submitting newsletter subscription"
+    }
+  },
+  "cmsCopyCorrections": {
+    "FAQ's": "FAQs",
+    "Lifetime BuyBack Policy": "Lifetime Buy-Back Policy",
+    "Daily Wear Earrings": "Statement Earrings"
+  }
+}

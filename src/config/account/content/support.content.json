@@ -1,0 +1,228 @@
+{
+  "pageTitle": "Palmonas Support Center",
+  "heroTitle": "Need Assistance? Raise a Support Ticket",
+  "hoursLabel": "Support Hours",
+  "hoursDays": "Monday - Sunday",
+  "hoursTime": "10:00 AM - 7:00 PM",
+  "callTitle": "Call Support",
+  "callDescription": "Speak directly with an agent",
+  "ticketTitle": "Raise a Ticket",
+  "ticketDescription": "Submit a detailed support request",
+  "faqHeading": "Frequently Asked Questions",
+  "items": [
+    {
+      "section": null,
+      "question": "How do I place an order?",
+      "paragraphs": [
+        "Select your preferred product(s) from the website/app, then:",
+        "Add them to your cart.",
+        "Enter your delivery address.",
+        "Apply coupons or rewards (if available).",
+        "Choose your payment method.",
+        "Complete the payment to place your order."
+      ]
+    },
+    {
+      "section": null,
+      "question": "How can I apply for a coupon?",
+      "paragraphs": [
+        "Go to the Cart page.",
+        "Navigate to the Offers & Rewards section.",
+        "Select and apply your preferred available coupon before payment."
+      ]
+    },
+    {
+      "section": null,
+      "question": "How do I redeem reward points?",
+      "paragraphs": [
+        "Go to the Cart page.",
+        "Visit the Offers & Rewards section in the cart.",
+        "If reward points are available, select the option to redeem them before checkout."
+      ]
+    },
+    {
+      "section": null,
+      "question": "How can I use a gift card?",
+      "paragraphs": [
+        "In the Offers & Rewards section, enter your gift card details.",
+        "Apply it before proceeding to payment."
+      ]
+    },
+    {
+      "section": null,
+      "question": "What payment methods are available?",
+      "paragraphs": [
+        "You can choose from:",
+        "Cash on Delivery (COD)",
+        "Net Banking, Credit Card, Debit Card",
+        "Wallet",
+        "UPI"
+      ]
+    },
+    {
+      "section": null,
+      "question": "How does my order progress?",
+      "paragraphs": [
+        "Once confirmed, your order moves through three stages:",
+        "Confirmation → Dispatch → Delivery",
+        "Dispatch timelines",
+        "Demifine® Pieces: 2–3 working days",
+        "Made-To-Order Pieces: 15 working days",
+        "Delivery",
+        "3–5 business days after dispatch.",
+        "Note: Tracking details are shared as soon as your piece leaves us."
+      ]
+    },
+    {
+      "section": null,
+      "question": "Can I change my payment method?",
+      "paragraphs": [
+        "If you wish to move from Cash on Delivery to Prepaid, the existing order must be cancelled. You may then place a new order using your preferred payment method."
+      ]
+    },
+    {
+      "section": null,
+      "question": "What if my order is delayed?",
+      "paragraphs": [
+        "Should there be any delay beyond the promised timeline, our team will personally review and expedite the matter. You will receive an update within 24–48 working hours."
+      ]
+    },
+    {
+      "section": null,
+      "question": "My order shows delivered, but I haven’t received it.",
+      "paragraphs": [
+        "Please contact us within 3 working days.",
+        "We’ll conduct a detailed review with our logistics partner (5–7 working days).",
+        "If non-delivery is confirmed, the amount will be refunded to your original payment method."
+      ]
+    },
+    {
+      "section": "Cancellations",
+      "question": "Can I cancel my order?",
+      "paragraphs": [
+        "Cancellations are dependent on order status:",
+        "If your tracking number has not been generated, cancellation may be requested within 24–48 working hours.",
+        "If the order has been dispatched, we request that you kindly decline delivery at the doorstep."
+      ]
+    },
+    {
+      "section": "Cancellations",
+      "question": "When will I receive my refund?",
+      "paragraphs": [
+        "For prepaid orders, refunds are processed within 48 working hours and reflected to the original payment method within 5–7 business days, subject to banking timelines."
+      ]
+    },
+    {
+      "section": "Cancellations",
+      "question": "Can Made-To-Order pieces be cancelled?",
+      "paragraphs": [
+        "Made-To-Order creations may be cancelled within 24 working hours of placement. Beyond this window, production is initiated and cancellation may not be possible."
+      ]
+    },
+    {
+      "section": "Returns",
+      "question": "I received a damaged or incorrect piece.",
+      "paragraphs": [
+        "We sincerely regret the inconvenience. Please raise the return request within 2 days of delivery using the return link and attach:",
+        "Clear images showing the product issue",
+        "A video taken in natural light highlighting the issue",
+        "Our team will review your request and guide you through the next step within 24 working hours."
+      ]
+    },
+    {
+      "section": "Returns",
+      "question": "The piece doesn’t meet my expectations or has a size concern.",
+      "paragraphs": [
+        "Please raise the return request within 2 days of delivery using the return link.",
+        "If a promotional offer was applied:",
+        "Full order return → Refund to original payment method",
+        "Partial return → Refund to Palmonas Wallet",
+        "Our team will assist you with the return process within 24 working hours once you raise the return request."
+      ]
+    },
+    {
+      "section": "Returns",
+      "question": "How long does return pickup take?",
+      "paragraphs": [
+        "Once return is approved, pickup is arranged within 3–5 working days.",
+        "Refunds are initiated after the piece is received and successfully passes quality inspection."
+      ]
+    },
+    {
+      "section": "Returns",
+      "question": "What if pickup is unavailable in my location?",
+      "paragraphs": [
+        "You may self-ship the piece to our Head Office:",
+        "501–505(A), 5th Floor",
+        "Verdant 84, Plot 1, Lane Z",
+        "Koregaon Park Annexe, Mundhwa",
+        "Pune, Maharashtra – 411036",
+        "Shipping reimbursement of up to ₹150 will be provided upon verification."
+      ]
+    },
+    {
+      "section": "Wallet Credits",
+      "question": "How can I check my wallet balance?",
+      "paragraphs": [
+        "On the App",
+        "Go to Account → Rewards.",
+        "You’ll see Wallet Balance (current available balance), Earned Rewards (total rewards accumulated), and Spent Rewards (rewards already redeemed).",
+        "On the Website",
+        "Visit the Palmonas homepage and click the Account icon (next to the search bar).",
+        "Select Order History to open your account window.",
+        "On the left, you’ll find Store Credit and Loyalty Points.",
+        "Your balance is always up to date for a seamless shopping experience. Refunds are valid for 180 days."
+      ]
+    },
+    {
+      "section": "Wallet Credits",
+      "question": "Why was my refund credited to the Palmonas Wallet?",
+      "paragraphs": [
+        "In certain instances, refunds are issued as a wallet credit in line with our policy. This may occur when:",
+        "A promotional offer, coupon, or discount was applied and only part of the order was returned (for example, 1 item returned from 2 items).",
+        "A return is processed under a warranty claim.",
+        "In such cases, the eligible refund amount is credited to your Palmonas Wallet for future purchases."
+      ]
+    },
+    {
+      "section": "Warranty & Aftercare",
+      "question": "What does the Demifine® Warranty cover?",
+      "paragraphs": [
+        "Our Demifine® Warranty protects against tarnishing or plating discoloration.",
+        "Coverage includes:",
+        "0–6 months → Replacement (subject to product availability) or 100% wallet credit (if unavailable)",
+        "6–9 months → 50% wallet credit",
+        "9–12 months → 25% wallet credit",
+        "Beyond 12 months → 15% wallet credit",
+        "Exclusions include:",
+        "Normal wear and tear",
+        "Accidental damage or breakage",
+        "Stone or crystal loss",
+        "Third-party alterations",
+        "Custom creations"
+      ]
+    },
+    {
+      "section": "Warranty & Aftercare",
+      "question": "What is the Made-To-Order Buyback Policy?",
+      "paragraphs": [
+        "Eligible MTO pieces qualify for:",
+        "Gold → 100% buyback on gold value (as per prevailing rate on claim date)",
+        "Diamonds → 80% buyback on diamond value",
+        "Making charges are non-refundable. All requests are subject to quality verification."
+      ]
+    },
+    {
+      "section": "Warranty & Aftercare",
+      "question": "Is warranty applicable to third-party purchases?",
+      "paragraphs": [
+        "Yes. Warranty coverage remains valid for purchases made through authorized third-party platforms, subject to verification.",
+        "To initiate a request, please raise a support ticket and share:",
+        "A copy of the original invoice",
+        "Clear images highlighting the concern",
+        "A video captured in natural light clearly showing the issue",
+        "Once submitted, your request will be reviewed within 24–48 working hours, and the appropriate resolution will be shared accordingly."
+      ]
+    }
+  ]
+}

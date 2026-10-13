@@ -1,0 +1,18 @@
+{
+  "messages": {
+    "validation": {
+      "nameRequired": "Name is required",
+      "phoneInvalid": "Enter a valid 10-digit mobile number",
+      "emailInvalid": "Enter a valid email address",
+      "addressLine1Required": "Address line 1 is required",
+      "cityRequired": "City is required",
+      "pincodeInvalid": "Enter a valid 6-digit pincode",
+      "enrollmentMethodRequired": "Please choose how you want to enroll",
+      "storeRequired": "Please select a store",
+      "termsRequired": "Please accept the terms & conditions"
+    },
+    "a11y": {
+      "termsCheckbox": "Accept terms and conditions"
+    }
+  }
+}

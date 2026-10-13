@@ -1,0 +1,202 @@
+{
+  "messages": {
+    "a11y": {
+      "navLabel": "Mobile navigation"
+    },
+    "labels": {
+      "home": "Home",
+      "demifine": "Demifine®",
+      "gold": "Gold",
+      "bestsellers": "Bestsellers",
+      "offers": "Offers",
+      "gifts": "Gifts",
+      "rakhi": "Rakhis",
+      "cart": "Cart",
+      "proposal-ring": "Proposal Ring",
+      "nine-kt": "9 KT"
+    }
+  },
+  "cartItem": {
+    "id": "cart",
+    "labelKey": "cart",
+    "icon": "cart",
+    "iconClassName": "h-6 w-6",
+    "href": "/cart"
+  },
+  "routeConfigs": [
+    {
+      "id": "demifine",
+      "routes": ["/"],
+      "homeCategory": "demifine",
+      "items": [
+        {
+          "id": "home",
+          "labelKey": "home",
+          "icon": "back",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "silver"
+        },
+        {
+          "id": "demifine",
+          "labelKey": "demifine",
+          "icon": "demifine",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "demifine"
+        },
+        {
+          "id": "bestsellers",
+          "labelKey": "bestsellers",
+          "icon": "bestsellers",
+          "iconClassName": "h-[22px] w-[22px]",
+          "collectionHandle": "bestsellers"
+        },
+        {
+          "id": "offers",
+          "labelKey": "offers",
+          "href": "/offers",
+          "icon": "offers",
+          "iconClassName": "h-[22px] w-[22px]"
+        }
+      ]
+    },
+    {
+      "id": "offers",
+      "routes": ["/offers"],
+
+      "items": [
+        {
+          "id": "home",
+          "labelKey": "home",
+          "icon": "back",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "silver"
+        },
+        {
+          "id": "demifine",
+          "labelKey": "demifine",
+          "icon": "demifine",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "demifine"
+        },
+        {
+          "id": "bestsellers",
+          "labelKey": "bestsellers",
+          "icon": "bestsellers",
+          "iconClassName": "h-[22px] w-[22px]",
+          "collectionHandle": "bestsellers"
+        },
+        {
+          "id": "offers",
+          "labelKey": "offers",
+          "href": "/offers",
+          "icon": "offers",
+          "iconClassName": "h-[22px] w-[22px]"
+        }
+      ]
+    },
+
+    {
+      "id": "gold",
+      "routes": ["/"],
+      "homeCategory": "gold",
+      "items": [
+        {
+          "id": "home",
+          "labelKey": "home",
+          "icon": "back",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "silver"
+        },
+        {
+          "id": "gold",
+          "labelKey": "gold",
+          "icon": "gold",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "gold"
+        },
+        {
+          "id": "proposal-ring",
+          "labelKey": "proposal-ring",
+          "icon": "proposal-ring",
+          "iconClassName": "h-[22px] w-[22px]",
+          "collectionHandle": "9kt-engagement-rings"
+        },
+        {
+          "id": "nine-kt",
+          "labelKey": "nine-kt",
+          "collectionHandle": "9kt-fine-gold",
+          "icon": "nine-kt",
+          "iconClassName": "h-[22px] w-[22px]"
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "routes": ["/"],
+      "items": [
+        {
+          "id": "home",
+          "labelKey": "home",
+          "icon": "home",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "silver"
+        },
+        {
+          "id": "gold",
+          "labelKey": "gold",
+          "icon": "gold",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "gold"
+        },
+        {
+          "id": "demifine",
+          "labelKey": "demifine",
+          "icon": "demifine",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "demifine"
+        },
+        {
+          "id": "gifts",
+          "labelKey": "gifts",
+          "href": "/gifting",
+          "icon": "gifts",
+          "iconClassName": "h-[22px] w-[22px]"
+        }
+      ]
+    },
+    {
+      "id": "gifting",
+      "routes": ["/gifting"],
+      "items": [
+        {
+          "id": "home",
+          "labelKey": "home",
+          "icon": "back",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "silver"
+        },
+        {
+          "id": "gold",
+          "labelKey": "gold",
+          "icon": "gold",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "gold"
+        },
+        {
+          "id": "demifine",
+          "labelKey": "demifine",
+          "icon": "demifine",
+          "iconClassName": "h-[22px] w-[22px]",
+          "homeCategory": "demifine"
+        },
+        {
+          "id": "gifts",
+          "labelKey": "gifts",
+          "href": "/gifting",
+          "icon": "gifts",
+          "iconClassName": "h-[22px] w-[22px]"
+        }
+      ]
+    }
+  ]
+}
